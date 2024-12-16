@@ -1,0 +1,96 @@
+@import "../../assets/styles/main.scss";
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 150%;
+    z-index: 99;
+    background-color: rgba(15, 29, 34, 0.7);
+    display: flex;
+    justify-content: flex-end;
+    transition: all 0.7s ease;
+
+    &.open {
+        left: 0;
+    }
+
+    .sidebarContent {
+        height: 100vh;
+        width: 100%;
+        max-width: 300px;
+        overflow: auto;
+        background-color: var(--bg-main2);
+        position: relative;
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .logo {
+            padding: 40px 25px 35px 25px;
+            display: flex;
+
+            img {
+                max-width: 100px;
+                height: auto;
+                display: block;
+            }
+        }
+
+        nav {
+            a {
+                display: flex;
+                align-items: center;
+                padding: 20px 30px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                position: relative;
+
+                &:last-child {
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                }
+
+                span {
+                    display: block;
+                    @include font16;
+                    line-height: normal;
+                    font-family: var(--font-family-josefin);
+                    color: var(--font-white);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .activeTag {
+                    display: none;
+                    position: absolute;
+                    left: 0px;
+                    width: 0;
+                    height: 0;
+                    border-top: 4px solid transparent;
+                    border-bottom: 4px solid transparent;
+                    border-left: 8px solid var(--font-gold);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    span {
+                        color: var(--font-gold);
+                    }
+                }
+
+                &.active {
+                    .activeTag {
+                        display: block;
+                    }
+
+                    span {
+                        color: var(--font-gold);
+                    }
+                }
+            }
+        }
+    }
+}

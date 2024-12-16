@@ -4,11 +4,30 @@
     padding: 30px 20px;
     border-bottom: 1px solid var(--border-color);
     position: relative;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint("sm-max") {
+        padding: 20px 0;
+    }
+
+    &.scroll {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+        background-color: var(--bg-main2);
+        border-bottom: transparent;
+        transition: all 0.3s ease-in-out;
+
+        &::after {
+            border-bottom: transparent;
+        }
+    }
 
     &::after {
         content: "";
         position: absolute;
-        top: calc(100% + 3px);
+        bottom: 3px;
         left: 0;
         width: 100%;
         border-bottom: 1px solid var(--border-color);
@@ -17,12 +36,17 @@
     .headerDiv {
         display: flex;
         justify-content: space-between;
+        gap: 20px;
 
         .logo {
             img {
                 max-width: 135px;
                 height: auto;
                 display: block;
+
+                @include breakpoint("sm-max") {
+                    max-width: 80px;
+                }
             }
         }
 
@@ -30,6 +54,10 @@
             display: flex;
             align-items: center;
             gap: 45px;
+
+            @include breakpoint("lg-max") {
+                display: none;
+            }
 
             a {
                 position: relative;
@@ -81,12 +109,40 @@
 
             .cart {
                 position: relative;
+
+                svg {
+                    @include breakpoint("sm-max") {
+                        width: 25px;
+                    }
+                }
+            }
+
+            .login {
+                svg {
+                    @include breakpoint("sm-max") {
+                        width: 25px;
+                    }
+                }
             }
 
             .menu {
                 display: none;
                 margin-left: 20px;
                 cursor: pointer;
+
+                @include breakpoint("sm-max") {
+                    margin-left: 0;
+                }
+
+                svg {
+                    @include breakpoint("sm-max") {
+                        width: 25px;
+                    }
+                }
+
+                @include breakpoint("lg-max") {
+                    display: block;
+                }
             }
         }
     }

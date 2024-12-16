@@ -6,6 +6,7 @@ import "@/assets/styles/partials/_theming.scss";
 import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "@/common/footer";
 import Header from "@/common/header";
+import TopRef from "@/common/topRef";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <TopRef />
       </body>
     </html>
   );

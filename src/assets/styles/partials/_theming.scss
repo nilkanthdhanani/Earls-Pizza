@@ -1,13 +1,15 @@
 :root {
-    --color-white: #fff;
-    --color-black: #000;
+    --color-white: #fff; // rgb(255, 255, 255)
+    --color-black: #000; // rgb(0, 0, 0)
     
-    --font-white: #fff;
-    --font-gold: #c9ab81;
+    --font-white: #fff; // rgb(255, 255, 255)
+    --font-gold: #c9ab81; // rgb(201, 171, 129)
+    
+    --bg-gold: #c9ab81; // rgb(201, 171, 129)
+    --bg-main: #0B1315; // rgb(11, 19, 21)
+    --bg-main2: #0f1d22; // rgb(15, 29, 34)
 
-    --bg-main: #0B1315;
-
-    --border-color: #715b3e;
+    --border-color: #715b3e; // rgb(113, 91, 62)
 
     --font-family-tangerine: "Tangerine";
     --font-family-oswald: "Oswald";
