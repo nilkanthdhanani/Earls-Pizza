@@ -2,12 +2,8 @@
 @import "typography";
 @import "variables";
 
-.container {
-    max-width: calc(1600px + 60px);
+.container2 {
+    max-width: calc(1580px + 40px);
     margin: 0 auto;
-    padding: 0 30px;
-
-    @include breakpoint("md-max") {
-        padding: 0 20px;
-    }
+    padding: 0 20px;
 }
