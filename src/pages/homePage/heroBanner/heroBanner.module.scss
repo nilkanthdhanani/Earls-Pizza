@@ -1,8 +1,58 @@
 @import "../../../assets/styles/main.scss";
 
 .heroBanner {
-    height: 200vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 130px 0;
+    background-image: url("../../../assets/images/png/heroBanner.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+            270deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+    }
+
+    .heroBannerMain {
+        position: relative;
+        z-index: 1;
+
+        .heroBannerContent {
+            max-width: 550px;
+
+            .welcome {
+                span {
+                    @include commonSpan;
+                }
+            }
+
+            h1 {
+                @include font75;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+                text-transform: uppercase;
+                margin-top: 10px;
+
+                span {
+                    font-weight: 200;
+                    color: var(--font-gold);
+                    letter-spacing: 30px;
+                }
+            }
+
+            p {
+                @include commonPera;
+                color: var(--font-white);
+                margin: 35px 0 25px 0;
+            }
+        }
+    }
 }

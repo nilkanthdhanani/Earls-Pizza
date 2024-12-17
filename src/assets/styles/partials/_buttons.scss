@@ -1,3 +1,54 @@
 @import "mixins";
 @import "typography";
 @import "variables";
+
+.heroBannerContent,
+.subscribeMail {
+    button {
+        padding: 17px 50px;
+        background-color: var(--bg-main);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+
+        span {
+            position: relative;
+            z-index: 1;
+            @include font16;
+            color: var(--font-white);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 51%;
+            top: 0;
+            left: 0;
+            background-color: var(--bg-gold);
+            transition: all 0.5s ease-in-out;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 51%;
+            bottom: 0;
+            left: 0;
+            background-color: var(--bg-gold);
+            transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                top: -51%;
+            }
+            &::before {
+                bottom: -51%;
+            }
+        }
+    }
+}
