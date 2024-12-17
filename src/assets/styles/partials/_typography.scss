@@ -23,6 +23,18 @@
     font-weight: 400;
 }
 
+@mixin font20bold {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+@mixin font28bold {
+    font-size: 28px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
 @mixin font36 {
     font-size: 36px;
     line-height: 38px;

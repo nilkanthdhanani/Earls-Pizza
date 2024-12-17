@@ -1,6 +1,9 @@
 import logo from "./png/logo.png";
 import shapeFooter from "./png/shapeFooter.png";
+import shapeLeaf from "./png/shapeLeaf.png";
+import shape1 from "./png/shape1.png";
+import shape2 from "./png/shape2.png";
 
 export {
-    logo, shapeFooter
+    logo, shapeFooter, shapeLeaf, shape1, shape2, 
 }

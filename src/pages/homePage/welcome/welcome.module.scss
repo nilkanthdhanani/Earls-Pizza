@@ -1,0 +1,29 @@
+@import "../../../assets/styles/main.scss";
+
+.welcome {
+    height: 100vh;
+    position: relative;
+
+    .leafShape {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        pointer-events: none;
+        transition: all 0.2s ease-out;
+    }
+    
+    .shapeOne {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        transform: translateY(-30%) translateX(-20%);
+
+        img {
+            width: 100%;
+            height: auto;
+            transform: rotate(70deg);
+        }
+    }
+}
