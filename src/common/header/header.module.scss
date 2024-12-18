@@ -4,6 +4,7 @@
     padding: 30px 20px;
     border-bottom: 1px solid var(--border-color);
     position: relative;
+    z-index: 9;
     background-color: var(--color-black);
     transition: all 0.3s ease-in-out;
 
@@ -15,7 +16,6 @@
         position: sticky;
         top: 0;
         width: 100%;
-        z-index: 9;
         background-color: var(--bg-main2);
         transition: all 0.3s ease-in-out;
 

@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import DropIcon from '@/assets/images/svg/dropIcon';
 import styles from './reserve.module.scss';
 import SearchIcon from '@/assets/images/svg/searchIcon';
 
 export default function Reserve() {
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const dropdownRefs = useRef({});
+
     const [selectedValues, setSelectedValues] = useState({
         persons: 'Persons 1',
         date: 'March 2',
@@ -26,27 +28,50 @@ export default function Reserve() {
         setActiveDropdown(null);
     };
 
-    const renderDropdown = (name, label) => (
-        <div className={styles.inputsDiv}>
-            <div className={styles.customSelect}>
-                <div className={styles.select} onClick={() => toggleDropdown(name)}>
-                    {selectedValues[name]}
-                    <div className={`${styles.dropIcon} ${activeDropdown === name ? styles.rotate : ''}`}>
-                        <DropIcon />
+    const renderDropdown = (name) => {
+        if (!dropdownRefs.current[name]) {
+            dropdownRefs.current[name] = React.createRef();
+        }
+
+        return (
+            <div className={styles.inputsDiv}>
+                <div className={styles.customSelect} ref={dropdownRefs.current[name]}>
+                    <div className={styles.select} onClick={() => toggleDropdown(name)}>
+                        {selectedValues[name]}
+                        <div className={`${styles.dropIcon} ${activeDropdown === name ? styles.rotate : ''}`}>
+                            <DropIcon />
+                        </div>
                     </div>
+                    {activeDropdown === name && (
+                        <div className={styles.dropBox}>
+                            {options[name].map((option, index) => (
+                                <div key={index} onClick={() => handleOptionClick(name, option)}>
+                                    {option}
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
-                {activeDropdown === name && (
-                    <div className={styles.dropBox}>
-                        {options[name].map((option, index) => (
-                            <div key={index} onClick={() => handleOptionClick(name, option)}>
-                                {option}
-                            </div>
-                        ))}
-                    </div>
-                )}
             </div>
-        </div>
-    );
+        );
+    };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => { 
+            const isOutside = !Object.values(dropdownRefs.current).some((ref) =>
+                ref.current && ref.current.contains(event.target)
+            );
+            if (isOutside) {
+                setActiveDropdown(null);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     return (
         <section>
@@ -62,9 +87,9 @@ export default function Reserve() {
                                 <div className={styles.inputsDiv}>
                                     <input type="number" name="phone" id="phone" placeholder="Phone" required />
                                 </div>
-                                {renderDropdown('persons', 'Persons')}
-                                {renderDropdown('date', 'Date')}
-                                {renderDropdown('time', 'Time')}
+                                {renderDropdown('persons')}
+                                {renderDropdown('date')}
+                                {renderDropdown('time')}
                             </div>
                             <div className={styles.searchBtn}>
                                 <button type="submit"><SearchIcon /></button>
