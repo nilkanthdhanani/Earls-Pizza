@@ -1,7 +1,7 @@
 @import "../../../assets/styles/main.scss";
 
 .welcome {
-    height: 100vh;
+    padding: 160px 0 100px 0;
     position: relative;
 
     .leafShape {
@@ -25,5 +25,11 @@
             height: auto;
             transform: rotate(70deg);
         }
+    }
+
+    .welcomeContent {
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
 }

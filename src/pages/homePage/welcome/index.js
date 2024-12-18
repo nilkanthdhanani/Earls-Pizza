@@ -37,6 +37,10 @@ export default function Welcome() {
             <div className={styles.leafShape} style={{ right: `${move}px` }}>
                 <Image src={shapeLeaf} alt="shapeLeaf" />
             </div>
+            <div className={styles.container}>
+                <div className={styles.welcomeContent}>
+                </div>
+            </div>
         </section>
     )
 }
