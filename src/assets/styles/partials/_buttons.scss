@@ -17,6 +17,7 @@
             position: relative;
             z-index: 1;
             @include font16;
+            font-family: var(--font-family-josefin);
             color: var(--font-white);
         }
 
@@ -97,6 +98,44 @@
             }
             &::before {
                 bottom: -51%;
+            }
+        }
+    }
+}
+
+.welcomeContentText {
+    button {
+        padding: 11px 34px;
+        background-color: var(--bg-main);
+        border: 1px solid var(--border-color);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+        span {
+            position: relative;
+            z-index: 1;
+            @include font16;
+            font-family: var(--font-family-josefin);
+            color: var(--font-white);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            top: 0;
+            background-color: var(--bg-gold);
+            transition: all 0.5s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
             }
         }
     }

@@ -9,27 +9,114 @@
         position: absolute;
         top: 50%;
         pointer-events: none;
-        transition: all 0.2s ease-out;
+        transition: all 1s ease-out;
     }
-    
+
     .shapeOne {
         pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
-        width: 50%;
-        transform: translateY(-30%) translateX(-20%);
-
-        img {
-            width: 100%;
-            height: auto;
-            transform: rotate(70deg);
-        }
+        transform: translateY(-30%);
     }
 
     .welcomeContent {
+        position: relative;
+        z-index: 1;
         margin-bottom: 100px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        .shapeIcon {
+            position: absolute;
+            top: 0;
+            left: -20%;
+            pointer-events: none;
+
+            img {
+                animation: rotateTop 5s linear infinite;
+                perspective: 500px;
+            }
+        }
+
+        .welcomeContentText {
+            .welcomeTitle {
+                span {
+                    @include commonSpan;
+                }
+            }
+
+            h1 {
+                @include commonHead;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+                margin: 10px 0 15px 0;
+
+                span {
+                    display: block;
+                    color: var(--font-gold);
+                }
+            }
+
+            p {
+                @include commonPera;
+                color: var(--font-gray);
+                margin: 20px 0 25px 0;
+            }
+        }
+
+        .pizzSlice {
+            min-height: 500px;
+            position: relative;
+
+            .pizzSliceBox {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                pointer-events: none;
+                transform: translateY(100px);
+                transition: all 0.4s ease-out;
+
+                img {
+                    max-width: 500px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .fetures {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        .feturesBox {
+            .feturesImage {
+                height: 90px;
+                width: 90px;
+                border-radius: 50%;
+                border: 1px solid var(--border-color);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h3 {
+                padding: 20px 0;
+                @include font20bold;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+            }
+
+            p {
+                @include commonPera;
+                color: var(--font-gray);
+                max-width: 250px;
+            }
+        }
     }
 }
