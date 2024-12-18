@@ -1,0 +1,86 @@
+@import "../../../assets/styles/main.scss";
+
+.pizzaSlider {
+    .sliderMain {
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .sliderImg {
+            min-height: 400px;
+            position: relative;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease-in-out;
+            }
+        }
+
+        .sliderBox {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            margin: 20px;
+            border: 1px solid var(--border-color);
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: flex-end;
+            transform: scale(0);
+            transition: all 0.4s ease-in-out;
+
+            .sliderBoxInner {
+                span {
+                    @include commonSpan;
+                }
+
+                h2 {
+                    @include font36Bold;
+                    font-family: var(--font-family-oswald);
+                    color: var(--font-white);
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                }
+            }
+        }
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+
+            .sliderImg {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            .sliderBox {
+                transform: scale(1);
+            }
+        }
+    }
+}

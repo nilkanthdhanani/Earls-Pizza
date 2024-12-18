@@ -1,0 +1,117 @@
+@import "../../../assets/styles/main.scss";
+
+.menu {
+    padding: 100px 0;
+    position: relative;
+
+    .menuShape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        transition: all 0.4s ease-out;
+    }
+
+    .menuHead {
+        max-width: 450px;
+        margin: 0 auto 50px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 100px;
+            background-image: url("../../../assets/images/png/grainLeft.png");
+            background-repeat: no-repeat;
+            animation: grainLeft 5s linear infinite;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            right: 0;
+            bottom: 0;
+            width: 50px;
+            height: 100px;
+            background-image: url("../../../assets/images/png/grainRight.png");
+            background-repeat: no-repeat;
+            animation: grainRight 5s linear infinite;
+        }
+
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin: 10px 0 15px 0;
+
+            span {
+                color: var(--font-gold);
+            }
+        }
+    }
+
+    .menuContent {
+        .menuContentGrid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 100px;
+
+            .menuGridBox {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                gap: 30px;
+
+                img {
+                    max-width: 100px;
+                    height: 100%;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+
+                .menuText {
+                    display: grid;
+                    grid-template-columns: 1fr auto;
+                    gap: 20px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid var(--border-color);
+
+                    h3 {
+                        @include font18bold;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-white);
+                    }
+
+                    p {
+                        @include commonPera;
+                        color: var(--font-gold);
+                    }
+
+                    span {
+                        @include font18bold;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .viewMoreBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}

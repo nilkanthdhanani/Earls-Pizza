@@ -80,3 +80,39 @@
     transform: rotate(0deg) translateX(0px);
   }
 }
+
+@keyframes grainLeft {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    transform: rotate(5deg) translateX(15px);
+  }
+  50% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  75% {
+    transform: rotate(-5deg) translateX(-15px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+
+@keyframes grainRight {
+  0% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  25% {
+    transform: rotate(5deg) translateX(15px);
+  }
+  50% {
+    transform: rotate(0deg) translateX(0px);
+  }
+  75% {
+    transform: rotate(-5deg) translateX(-15px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
