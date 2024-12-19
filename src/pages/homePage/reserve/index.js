@@ -92,7 +92,7 @@ export default function Reserve() {
                                 {renderDropdown('time')}
                             </div>
                             <div className={styles.searchBtn}>
-                                <button type="submit"><SearchIcon /></button>
+                                <button type="submit" aria-label='search'><SearchIcon /></button>
                             </div>
                         </form>
                     </div>

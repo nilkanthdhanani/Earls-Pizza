@@ -76,13 +76,13 @@ export default function Footer() {
             </Link>
             <p>At Earls, we serve fresh, delicious pizza crafted with passion and dedication to providing unforgettable dining experiences.</p>
             <div className={styles.socialLinks}>
-              <Link href={"https://www.facebook.com/"} target='_blank'>
+              <Link href={"https://www.facebook.com/"} target='_blank' aria-label='facebook'>
                 <FacebookIcon />
               </Link>
-              <Link href={"https://www.linkedin.com/"} target='_blank'>
+              <Link href={"https://www.linkedin.com/"} target='_blank' aria-label='linkedin'>
                 <LinkdInIcon />
               </Link>
-              <Link href={"https://twitter.com/"} target='_blank'>
+              <Link href={"https://twitter.com/"} target='_blank' aria-label='twitter'>
                 <TwitterIcon />
               </Link>
             </div>

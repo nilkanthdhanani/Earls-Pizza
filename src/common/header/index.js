@@ -82,12 +82,12 @@ export default function Header() {
             </nav>
             <div className={styles.cartLogin}>
               <Link href={"/cart"}>
-                <div className={styles.cart}>
+                <div className={styles.cart} aria-label='cart'>
                   <CartIcon />
                 </div>
               </Link>
               <Link href={"/login"}>
-                <div className={styles.logIn}>
+                <div className={styles.logIn} aria-label='login'>
                   <LoginIcon />
                 </div>
               </Link>

@@ -32,7 +32,7 @@ export default function WelcomeContent() {
         <div className={styles.welcomeContent} ref={welcomeContentRef}>
             <div className={styles.welcomeContentText}>
                 <div className={styles.welcomeTitle}><span>Welcome</span></div>
-                <h1>We make the best pizza in <span>The Town.</span></h1>
+                <h2>We make the best pizza in <span>The Town.</span></h2>
                 <div className={styles.vintageBorder}>
                     <Image src={vintageBorder} alt="vintageBorder" />
                 </div>
