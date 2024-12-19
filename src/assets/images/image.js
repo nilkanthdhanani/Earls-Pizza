@@ -10,7 +10,6 @@ import kFood01 from "./webp/kFood01.webp";
 import kFood02 from "./webp/kFood02.webp";
 import kFood03 from "./webp/kFood03.webp";
 import kFood04 from "./webp/kFood04.webp";
-
 import pizza1 from "./webp/pizza1.webp";
 import pizza2 from "./webp/pizza2.webp";
 import pizza3 from "./webp/pizza3.webp";
@@ -23,7 +22,5 @@ import pizza9 from "./webp/pizza9.webp";
 import pizza10 from "./webp/pizza10.webp";
 
 export {
-    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04, 
-
-    pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10
-}   
+    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04, pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10
+}
