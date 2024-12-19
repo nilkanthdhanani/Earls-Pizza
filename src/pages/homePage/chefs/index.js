@@ -99,13 +99,13 @@ export default function Chefs() {
                                     <h3>{data.name}</h3>
                                     <span>{data.post}</span>
                                     <div className={styles.socialLinks}>
-                                        <Link href={"https://www.facebook.com/"} target='_blank' aria-label='facebook'>
+                                        <Link href={"https://www.facebook.com/"} target='_blank' aria-label='facebook' tabIndex="-1">
                                             <FacebookIcon />
                                         </Link>
-                                        <Link href={"https://www.linkedin.com/"} target='_blank' aria-label='linkedin'>
+                                        <Link href={"https://www.linkedin.com/"} target='_blank' aria-label='linkedin' tabIndex="-1">
                                             <LinkdInIcon />
                                         </Link>
-                                        <Link href={"https://twitter.com/"} target='_blank' aria-label='twitter'>
+                                        <Link href={"https://twitter.com/"} target='_blank' aria-label='twitter' tabIndex="-1">
                                             <TwitterIcon />
                                         </Link>
                                     </div>
