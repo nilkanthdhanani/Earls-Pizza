@@ -1,0 +1,80 @@
+@import "../../../assets/styles/main.scss";
+
+.review {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 400px;
+        width: 400px;
+        background-color: var(--bg-main2);
+        border-radius: 10px;
+    }
+
+    .reviewDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .reviewSlide {
+        min-width: 1px;
+
+        .reviewBox {
+            .reviewText {
+                height: 450px;
+                
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                    margin: 30px 0 20px 0;
+                }
+
+                h2 {
+                    @include commonHead;
+                    color: var(--font-white);
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    @include commonPera;
+                    color: var(--font-gold);
+                }
+            }
+        }
+    }
+}
+
+.customNextArrow,
+.customPrevArrow {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    
+    &::before {
+        display: none;
+    }
+}
+
+.customNextArrow {
+    left: 50px;
+}
+
+.customPrevArrow{
+    left: 0;
+}

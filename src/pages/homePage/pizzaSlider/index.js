@@ -1,5 +1,5 @@
 import styles from './pizzaSlider.module.scss'
-import Slider from "react-slick";
+import Slider from "react-slick";   
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, } from '@/assets/images/image';

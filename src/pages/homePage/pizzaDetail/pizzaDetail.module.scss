@@ -1,0 +1,104 @@
+@import "../../../assets/styles/main.scss";
+
+.pizzaDetail {
+    padding: 100px 0;
+    position: relative;
+
+    .pizzaDetailText {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 40px;
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .pizzaDetailBox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        position: relative;
+
+        .detailBox1,
+        .detailBox2,
+        .detailBox3 {
+            .detailBoxText {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: var(--color-white);
+                }
+
+                h2 {
+                    @include font28bold;
+                    color: var(--font-white);
+                    padding-bottom: 20px;
+                }
+
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                    max-width: 350px;
+                }
+            }
+        }
+
+        .detailBox1 {
+            padding-top: 20px;
+
+            .detailBoxText {
+                text-align: right;
+                align-items: end;
+
+                &::after {
+                    width: 150px;
+                    height: 2px;
+                    right: -155px;
+                    top: 18px;
+                }
+            }
+        }
+
+        .detailBox2 {
+            .detailBoxText {
+                padding-top: 50px;
+                text-align: center;
+                align-items: center;
+
+                &::after {
+                    width: 2px;
+                    height: 150px;
+                    left: 50%;
+                    top: -100px;
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .detailBox3 {
+            padding-top: 100px;
+
+            .detailBoxText {
+                &::after {
+                    width: 150px;
+                    height: 2px;
+                    left: -155px;
+                    top: 18px;
+                }
+            }
+        }
+    }
+}

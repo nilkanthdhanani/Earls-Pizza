@@ -10,13 +10,13 @@ const fetures = [
     },
     {
         image: kFood02,
-        title: "Skilled Chefs",
-        detail: "Our talented chefs combine expertise and creativity to craft pizzas that are as visually stunning as they are delicious.",
+        title: "Fast Delivery",
+        detail: "Enjoy your favorite pizzas delivered hot and fresh to your doorstep, thanks to our efficient delivery team."
     },
     {
         image: kFood03,
-        title: "Bamboo Bar's Best Bar",
-        detail: "Pair your pizza with refreshing drinks from our Bamboo Bar, offering the best cocktails, mocktails, and beverages in town.",
+        title: "Customizable Options",
+        detail: "Create your perfect pizza with our wide range of toppings, sauces, and crust options tailored to your taste."
     },
     {
         image: kFood04,

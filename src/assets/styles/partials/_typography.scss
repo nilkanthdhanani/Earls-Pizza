@@ -78,6 +78,12 @@
     }
 }
 
+@mixin font50 {
+    font-size: 50px;
+    line-height: 56px;
+    font-weight: 700;
+}
+
 @mixin font75 {
     font-size: 75px;
     line-height: 90px;

@@ -63,6 +63,15 @@
   }
 }
 
+@keyframes fadeBig {
+  80% {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
 @keyframes rotateTop {
   0% {
     transform: rotate(0deg) translateX(0px);

@@ -1,0 +1,134 @@
+@import "../../../assets/styles/main.scss";
+
+.chefs {
+    padding: 0 0 100px 0;
+
+    .chefsHead {
+        margin-bottom: 60px;
+
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin: 10px 0 15px 0;
+
+            span {
+                color: var(--font-gold);
+            }
+        }
+
+        p {
+            @include commonPera;
+            color: var(--font-gray);
+            margin-top: 20px;
+            max-width: 500px;
+        }
+    }
+
+    .chefSlider {
+        .sliderMain {
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, 0.6);
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .sliderImg {
+                min-height: 500px;
+                position: relative;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all 0.4s ease-in-out;
+                }
+            }
+
+            .sliderBox {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                padding: 30px;
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                margin: 20px;
+                border: 1px solid var(--border-color);
+                background-color: rgba(0, 0, 0, 0.7);
+                display: flex;
+                align-items: flex-end;
+                transform: scale(0);
+                transition: all 0.4s ease-in-out;
+
+                .sliderBoxInner {
+                    span {
+                        @include commonSpan;
+                    }
+
+                    h3 {
+                        @include font28bold;
+                        font-family: var(--font-family-oswald);
+                        color: var(--font-white);
+                        padding-bottom: 10px;
+                    }
+
+                    span {
+                        @include commonPera;
+                        color: var(--font-white);
+                    }
+
+                    .socialLinks {
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        svg {
+                            fill: var(--color-white);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                fill: var(--font-gold);
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+
+                .sliderImg {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+
+                .sliderBox {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}

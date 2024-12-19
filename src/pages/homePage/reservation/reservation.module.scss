@@ -1,0 +1,111 @@
+@import "../../../assets/styles/main.scss";
+
+.reservation {
+    padding: 100px 0;
+    position: relative;
+
+    .tometos {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        pointer-events: none;
+        transition: all 0.4s ease-out;
+    }
+
+    .resDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+
+        .resDivContent {
+            .resDivContentHead {
+                .welcomeTitle {
+                    span {
+                        @include commonSpan;
+                    }
+                }
+
+                h2 {
+                    @include commonHead;
+                    font-family: var(--font-family-oswald);
+                    color: var(--font-white);
+                    margin: 10px 0 15px 0;
+
+                    span {
+                        color: var(--font-gold);
+                    }
+                }
+
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                    margin-top: 20px;
+                    max-width: 500px;
+                }
+            }
+
+            .fetures {
+                margin-top: 50px;
+                position: relative;
+                z-index: 1;
+
+                .feturesBox {
+                    margin-bottom: 35px;
+                    display: flex;
+                    gap: 30px;
+
+                    .feturesImage {
+                        height: 90px;
+                        width: 90px;
+                        border-radius: 50%;
+                        border: 1px solid var(--border-color);
+                        background-color: var(--bg-main2);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            max-width: 40px;
+                            height: auto;
+                        }
+                    }
+
+                    h3 {
+                        padding-bottom: 20px;
+                        @include font20bold;
+                        font-family: var(--font-family-oswald);
+                        color: var(--font-white);
+                    }
+
+                    p {
+                        @include commonPera;
+                        color: var(--font-gray);
+                        max-width: 350px;
+                    }
+                }
+            }
+        }
+
+        .resDivImage {
+            background-image: url("../../../assets/images/webp/halfPizza.webp");
+            background-size: cover;
+            padding: 50px;
+            display: flex;
+            justify-content: flex-end;
+
+            .resDivTime {
+                margin-top: 50px;
+
+                img {
+                    margin-bottom: 20px;
+                }
+
+                span {
+                    display: block;
+                    @include commonPera;
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+}

@@ -29,6 +29,10 @@
             top: 20px;
             right: 20px;
             cursor: pointer;
+
+            svg {
+                fill: var(--bg-gold);
+            }
         }
 
         .logo {
