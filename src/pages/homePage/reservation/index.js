@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import styles from './reservation.module.scss'
 import { clock, kFood05, kFood06, kFood07, tometo, vintageBorder } from '@/assets/images/image'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const fetures = [
     {
@@ -22,37 +22,27 @@ const fetures = [
 ]
 
 export default function Reservation() {
-    const [menuShapeOffset, setMenuShapeOffset] = useState(100);
+    const reservationRef = useRef(null);
+    const [tometoBottom, setTometoBottom] = useState(-100);
 
     useEffect(() => {
         const handleScroll = () => {
-            const menuSection = document.querySelector(`.${styles.reservation}`);
-            const sectionTop = menuSection?.offsetTop || 0;
-            const sectionHeight = menuSection?.offsetHeight || 0;
-            const scrollPosition = window.scrollY;
+            if (!reservationRef.current) return;
 
-            if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
-                const progress = (scrollPosition - sectionTop) / sectionHeight;
-                const offset = Math.min(progress * 150, 150);
-                setMenuShapeOffset(offset);
-            } else if (scrollPosition < sectionTop) {
-                setMenuShapeOffset(0);
-            } else {
-                setMenuShapeOffset(150);
-            }
+            const rect = reservationRef.current.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+
+            const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+
+            setTometoBottom(-100 + progress * 200);
         };
 
         window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+        return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <section className={styles.reservation}>
-            <div className={styles.tometos} style={{ bottom: `${menuShapeOffset}px` }}>
-                <Image src={tometo} alt="tometo" />
-            </div>
+        <section className={styles.reservation} ref={reservationRef}>
             <div className={styles.container}>
                 <div className={styles.resDiv}>
                     <div className={styles.resDivContent}>
@@ -79,6 +69,9 @@ export default function Reservation() {
                         </div>
                     </div>
                     <div className={styles.resDivImage}>
+                        <div className={styles.tometos} style={{ bottom: `${tometoBottom}px` }}>
+                            <Image src={tometo} alt="tometo" />
+                        </div>
                         <div className={styles.resDivTime}>
                             <Image src={clock} alt="clock" />
                             <span>BF: 6am - 9:30am</span>

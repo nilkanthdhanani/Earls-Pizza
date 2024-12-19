@@ -2,15 +2,7 @@
 
 .reservation {
     padding: 100px 0;
-    position: relative;
-
-    .tometos {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        pointer-events: none;
-        transition: all 0.4s ease-out;
-    }
+    overflow: hidden;
 
     .resDiv {
         display: grid;
@@ -92,6 +84,14 @@
             padding: 50px;
             display: flex;
             justify-content: flex-end;
+            position: relative;
+        
+            .tometos {
+                position: absolute;
+                right: -40px;
+                pointer-events: none;
+                transition: all 0.4s ease-out;
+            }
 
             .resDivTime {
                 margin-top: 50px;
