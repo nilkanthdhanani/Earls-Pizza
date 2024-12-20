@@ -10,13 +10,13 @@ import QuotIcon from '@/assets/images/svg/quotIcon';
 
 const reviews = [
     {
-        id: 2,
+        id: 1,
         name: "Wade Warren",
         post: "Manager",
         description: "Wade Warren is an exceptional manager with a talent for creating a welcoming atmosphere. His leadership ensures seamless operations, while his friendly demeanor and problem-solving skills make him a favorite among staff and customers alike. Wade always goes above and beyond to provide outstanding service."
     },
     {
-        id: 1,
+        id: 2,
         name: "Dev Jon",
         post: "Senior Chef",
         description: "Dev Jon is a remarkable chef with years of experience in crafting delightful culinary creations. His attention to detail and passion for cooking make him stand out in the kitchen. Customers consistently praise his innovative dishes and ability to elevate traditional recipes into unforgettable dining experiences."
