@@ -12,29 +12,10 @@ import Sidebar from '../sidebar';
 export default function Header() {
   const pathname = usePathname();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   useEffect(() => {
     if (isSidebarOpen) {
@@ -50,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${styles.header} ${isScrolled ? styles.scroll : ''}`}>
+      <header className={styles.header}>
         <div className={styles.container2}>
           <div className={styles.headerDiv}>
             <Link href={"/"}>

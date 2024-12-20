@@ -6,6 +6,10 @@
     padding-bottom: 50px;
     position: relative;
 
+    @include breakpoint("lg-max") {
+        padding: 50px 0 0 0;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -15,14 +19,25 @@
         width: 400px;
         background-color: var(--bg-main2);
         border-radius: 10px;
+
+        @include breakpoint("lg-max") {
+            left: auto;
+            bottom: auto;
+            right: 0;
+            top: 0;
+        }
     }
 
     .reviewDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
+        gap: 50px 40px;
         position: relative;
         z-index: 1;
+        
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+        }
 
         img {
             border-radius: 10px;
@@ -34,12 +49,17 @@
 
         .reviewBox {
             .reviewText {
-                height: 450px;
+                min-height: 450px;
+                padding-bottom: 30px;
                 
                 p {
                     @include commonPera;
                     color: var(--font-gray);
                     margin: 30px 0 20px 0;
+
+                    @include breakpoint("lg-max") {
+                        max-width: 600px;
+                    }
                 }
 
                 h2 {
@@ -65,6 +85,11 @@
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
+
+    @include breakpoint("sm-max") {
+        bottom: auto;
+        top: 10px;
+    }
     
     &::before {
         display: none;
@@ -73,8 +98,18 @@
 
 .customNextArrow {
     left: 50px;
+
+    @include breakpoint("sm-max") {
+        left: auto;
+        right: 10px;
+    }
 }
 
 .customPrevArrow{
     left: 0;
+
+    @include breakpoint("sm-max") {
+        left: auto;
+        right: 50px;
+    }
 }

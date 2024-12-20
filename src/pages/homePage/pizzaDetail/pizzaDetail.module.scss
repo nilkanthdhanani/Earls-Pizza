@@ -4,6 +4,10 @@
     padding: 100px 0;
     position: relative;
 
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
     .pizzaDetailText {
         position: absolute;
         height: 100%;
@@ -24,6 +28,10 @@
         gap: 20px;
         position: relative;
 
+        @include breakpoint("md-max") {
+            grid-template-columns: 1fr;
+        }
+
         .detailBox1,
         .detailBox2,
         .detailBox3 {
@@ -36,6 +44,10 @@
                     position: absolute;
                     content: "";
                     background-color: var(--color-white);
+
+                    @include breakpoint("md-max") {
+                        display: none;
+                    }
                 }
 
                 h2 {
@@ -55,9 +67,18 @@
         .detailBox1 {
             padding-top: 20px;
 
+            @include breakpoint("md-max") {
+                padding: 0;
+            }
+
             .detailBoxText {
                 text-align: right;
                 align-items: end;
+
+                @include breakpoint("md-max") {
+                    text-align: center;
+                    align-items: center;
+                }
 
                 &::after {
                     width: 150px;
@@ -69,10 +90,20 @@
         }
 
         .detailBox2 {
+            @include breakpoint("md-max") {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .detailBoxText {
                 padding-top: 50px;
                 text-align: center;
                 align-items: center;
+
+                @include breakpoint("md-max") {
+                    padding-top: 20px;
+                }
 
                 &::after {
                     width: 2px;
@@ -85,13 +116,28 @@
             img {
                 width: 100%;
                 height: auto;
+
+                @include breakpoint("md-max") {
+                    max-width: 400px;
+                }
             }
         }
 
         .detailBox3 {
             padding-top: 100px;
 
+            @include breakpoint("md-max") {
+                padding-top: 0;
+            }
+            
             .detailBoxText {
+                @include breakpoint("md-max") {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 &::after {
                     width: 150px;
                     height: 2px;

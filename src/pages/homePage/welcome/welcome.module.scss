@@ -4,12 +4,24 @@
     padding: 160px 0 100px 0;
     position: relative;
 
+    @include breakpoint("lg-max") {
+        padding: 200px 0 100px 0;
+    }
+
+    @include breakpoint("sm-max") {
+        padding: 200px 0 60px 0;
+    }
+
     .leafShape {
         pointer-events: none;
         position: absolute;
         top: 50%;
         pointer-events: none;
         transition: all 1s ease-out;
+
+        @include breakpoint("sm-max") {
+            display: none;
+        }
     }
 
     .shapeOne {
@@ -28,6 +40,15 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         gap: 30px;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        @include breakpoint("sm-max") {
+            margin-bottom: 60px;
+        }
 
         .shapeIcon {
             position: absolute;
@@ -64,12 +85,17 @@
                 @include commonPera;
                 color: var(--font-gray);
                 margin: 20px 0 25px 0;
+                max-width: 600px;
             }
         }
 
         .pizzSlice {
             min-height: 500px;
             position: relative;
+
+            @include breakpoint("lg-max") {
+                display: none;
+            }
 
             .pizzSliceBox {
                 position: absolute;
@@ -95,6 +121,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+        
+        @include breakpoint("lg-max") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint("sm-max") {
+            grid-template-columns: 1fr;
+        }
 
         .feturesBox {
             .feturesImage {
@@ -124,6 +158,10 @@
                 @include commonPera;
                 color: var(--font-gray);
                 max-width: 250px;
+
+                @include breakpoint("lg-max"){
+                    max-width: 400px;
+                }
             }
         }
     }

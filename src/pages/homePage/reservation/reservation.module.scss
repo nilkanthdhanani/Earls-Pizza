@@ -4,10 +4,18 @@
     padding: 100px 0;
     overflow: hidden;
 
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
     .resDiv {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+        }
 
         .resDivContent {
             .resDivContentHead {
@@ -41,14 +49,31 @@
                 position: relative;
                 z-index: 1;
 
+                @include breakpoint("lg-max") {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 40px 30px;
+                }
+
+                @include breakpoint("sm-max") {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+
                 .feturesBox {
                     margin-bottom: 35px;
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 90px 1fr;
                     gap: 30px;
 
+                    @include breakpoint("lg-max") {
+                        grid-template-columns: 1fr;
+                        margin-bottom: 0;
+                    }
+
                     .feturesImage {
-                        height: 90px;
                         width: 90px;
+                        height: 90px;
                         border-radius: 50%;
                         border: 1px solid var(--border-color);
                         background-color: var(--bg-main2);
@@ -85,16 +110,46 @@
             display: flex;
             justify-content: flex-end;
             position: relative;
-        
+
+            @include breakpoint("lg-max") {
+                min-height: 700px;
+            }
+
+            @include breakpoint("sm-max") {
+                padding: 30px;
+                min-height: 500px;
+                justify-content: start;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 100%;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(
+                        270deg,
+                        rgba(0, 0, 0, 0.2) 0%,
+                        rgba(0, 0, 0, 0.7) 100%
+                    );
+                }
+            }
+
             .tometos {
                 position: absolute;
                 right: -40px;
                 pointer-events: none;
                 transition: all 0.4s ease-out;
+
+                @include breakpoint("sm-max") {
+                    display: none;
+                }
             }
 
             .resDivTime {
                 margin-top: 50px;
+                position: relative;
+                z-index: 1;
 
                 img {
                     margin-bottom: 20px;

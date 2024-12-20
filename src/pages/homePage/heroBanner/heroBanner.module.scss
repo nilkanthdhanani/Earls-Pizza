@@ -7,6 +7,10 @@
     background-size: cover;
     position: relative;
 
+    @include breakpoint("sm-max") {
+        padding: 60px 0 130px 0;
+    }
+
     &::after {
         position: absolute;
         content: "";
@@ -42,9 +46,14 @@
                 margin-top: 10px;
 
                 span {
+                    display: block;
                     font-weight: 200;
                     color: var(--font-gold);
                     letter-spacing: 30px;
+
+                    @include breakpoint("sm-max") {
+                        letter-spacing: 20px;
+                    }
                 }
             }
 

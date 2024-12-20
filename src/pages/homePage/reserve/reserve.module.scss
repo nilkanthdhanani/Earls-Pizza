@@ -3,6 +3,14 @@
 .reserve {
     position: relative;
 
+    @include breakpoint("md-max") {
+        padding: 50px 0;
+    }
+
+    @include breakpoint("sm-max") {
+        padding: 70px 0;
+    }
+
     .reserveDiv {
         position: absolute;
         width: 100%;
@@ -15,6 +23,14 @@
         grid-template-columns: 200px 1fr;
         align-items: center;
         gap: 20px;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+        }
+
+        @include breakpoint("sm-max") {
+            padding: 20px;
+        }
 
         .reserveDivTitle {
             span {
@@ -40,35 +56,29 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 20px;
 
-                .inputsDiv {
-                    input {
-                        padding: 15px;
-                        width: 100%;
-                        border: 1px solid rgba(176, 176, 176, 0.2);
-                        background-color: var(--bg-main);
-                        @include font16;
-                        font-family: var(--font-family-josefin);
-                        color: var(--font-white);
+                @include breakpoint("md-max") {
+                    grid-template-columns: repeat(3, 1fr);
+                }
 
-                        &:focus {
-                            outline: none;
-                        }
+                @include breakpoint("sm-max") {
+                    grid-template-columns: 1fr;
+                }
+
+                .inputsDivMain {
+                    @include breakpoint("md-max") {
+                        grid-column: span 3;
+                        display: grid;
+                        grid-template-columns: 1fr 50px;
+                        align-items: center;
+                        gap: 20px;
                     }
 
-                    input::-webkit-outer-spin-button,
-                    input::-webkit-inner-spin-button {
-                        -webkit-appearance: none;
-                        margin: 0;
+                    @include breakpoint("sm-max") {
+                        grid-column: span 1;
                     }
 
-                    ::placeholder {
-                        color: var(--font-gray);
-                    }
-
-                    .customSelect {
-                        position: relative;
-
-                        .select {
+                    .inputsDiv {
+                        input {
                             padding: 15px;
                             width: 100%;
                             border: 1px solid rgba(176, 176, 176, 0.2);
@@ -76,49 +86,91 @@
                             @include font16;
                             font-family: var(--font-family-josefin);
                             color: var(--font-white);
-                            cursor: pointer;
-                            position: relative;
 
-                            .dropIcon {
-                                position: absolute;
-                                top: 15px;
-                                right: 15px;
-
-                                svg {
-                                    fill: var(--font-white);
-                                    transition: transform 0.3s ease;
-                                }
-
-                                &.rotate {
-                                    svg {
-                                        transform: rotate(-180deg);
-                                    }
-                                }
+                            &:focus {
+                                outline: none;
                             }
                         }
 
-                        .dropBox {
+                        input::-webkit-outer-spin-button,
+                        input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        ::placeholder {
+                            color: var(--font-gray);
+                        }
+                    }
+
+                    .searchBtn2 {
+                        display: none;
+
+                        @include breakpoint("md-max") {
+                            display: block;
+                        }
+                    }
+                }
+
+                .customSelect {
+                    position: relative;
+
+                    .select {
+                        padding: 15px;
+                        width: 100%;
+                        border: 1px solid rgba(176, 176, 176, 0.2);
+                        background-color: var(--bg-main);
+                        @include font16;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-white);
+                        cursor: pointer;
+                        position: relative;
+
+                        .dropIcon {
                             position: absolute;
-                            margin-top: 5px;
-                            width: 100%;
-                            top: 100%;
-                            background-color: var(--bg-main);
-                            border: 1px solid rgba(176, 176, 176, 0.2);
-                            z-index: 10;
+                            top: 15px;
+                            right: 15px;
 
-                            div {
-                                cursor: pointer;
-                                padding: 15px 20px;
-                                @include font16;
-                                font-family: var(--font-family-josefin);
-                                color: var(--font-gray);
+                            svg {
+                                fill: var(--font-white);
+                                transition: transform 0.3s ease;
+                            }
 
-                                &:hover {
-                                    background-color: var(--bg-main2);
+                            &.rotate {
+                                svg {
+                                    transform: rotate(-180deg);
                                 }
                             }
                         }
                     }
+
+                    .dropBox {
+                        position: absolute;
+                        margin-top: 5px;
+                        width: 100%;
+                        top: 100%;
+                        background-color: var(--bg-main);
+                        border: 1px solid rgba(176, 176, 176, 0.2);
+                        z-index: 10;
+
+                        div {
+                            cursor: pointer;
+                            padding: 15px 20px;
+                            @include font16;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-gray);
+
+                            &:hover {
+                                background-color: var(--bg-main2);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .searchBtn {
+                @include breakpoint("md-max") {
+                    display: none;
                 }
             }
         }

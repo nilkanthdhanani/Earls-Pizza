@@ -4,10 +4,15 @@
     padding: 100px 0;
     position: relative;
 
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
     .menuShape {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: -1;
         pointer-events: none;
         transition: all 0.4s ease-out;
     }
@@ -20,6 +25,10 @@
         align-items: center;
         position: relative;
 
+        @include breakpoint("sm-max") {
+            margin: 0 auto 30px auto;
+        }
+
         &::after {
             position: absolute;
             content: "";
@@ -30,6 +39,10 @@
             background-image: url("../../../assets/images/webp/grainLeft.webp");
             background-repeat: no-repeat;
             animation: grainLeft 5s linear infinite;
+
+            @include breakpoint("sm-max") {
+                display: none;
+            }
         }
 
         &::before {
@@ -42,6 +55,10 @@
             background-image: url("../../../assets/images/webp/grainRight.webp");
             background-repeat: no-repeat;
             animation: grainRight 5s linear infinite;
+
+            @include breakpoint("sm-max") {
+                display: none;
+            }
         }
 
         .welcomeTitle {
@@ -68,16 +85,35 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 30px 100px;
 
+            @include breakpoint("lg-max") {
+                grid-template-columns: repeat(1, minmax(0, 600px));
+                gap: 30px;
+                justify-content: center;
+            }
+
             .menuGridBox {
                 display: grid;
                 grid-template-columns: 100px 1fr;
                 gap: 30px;
 
+                &:nth-child(even) {
+                    @include breakpoint("sm-max") {
+                        display: none;
+                    }
+                }
+
+                @include breakpoint("sm-max") {
+                    grid-template-columns: 1fr;
+                }
+
                 img {
                     max-width: 100px;
                     height: 100%;
                     border-radius: 5px;
-                    object-fit: cover;
+
+                    @include breakpoint("sm-max") {
+                        max-width: 100%;
+                    }
                 }
 
                 .menuText {

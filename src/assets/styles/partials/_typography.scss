@@ -89,4 +89,9 @@
     line-height: 90px;
     font-weight: 700;
     letter-spacing: 1.6px;
+
+    @include breakpoint("sm-max") {
+        font-size: 50px;
+        line-height: 60px;
+    }
 }

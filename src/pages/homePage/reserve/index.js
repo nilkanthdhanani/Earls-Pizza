@@ -57,7 +57,7 @@ export default function Reserve() {
     };
 
     useEffect(() => {
-        const handleClickOutside = (event) => { 
+        const handleClickOutside = (event) => {
             const isOutside = !Object.values(dropdownRefs.current).some((ref) =>
                 ref.current && ref.current.contains(event.target)
             );
@@ -84,8 +84,13 @@ export default function Reserve() {
                         </div>
                         <form>
                             <div className={styles.inputs}>
-                                <div className={styles.inputsDiv}>
-                                    <input type="number" name="phone" id="phone" placeholder="Phone" required />
+                                <div className={styles.inputsDivMain}>
+                                    <div className={styles.inputsDiv}>
+                                        <input type="number" name="phone" id="phone" placeholder="Phone" required />
+                                    </div>
+                                    <div className={styles.searchBtn2}>
+                                        <button type="submit" aria-label='search'><SearchIcon /></button>
+                                    </div>
                                 </div>
                                 {renderDropdown('persons')}
                                 {renderDropdown('date')}
