@@ -23,7 +23,7 @@
     .aboutBannerHead{
         position: relative;
         z-index: 1;
-
+        
         h1 {
             @include font75;
             color: var(--font-white);
