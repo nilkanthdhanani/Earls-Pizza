@@ -34,6 +34,10 @@ import chef4 from "./webp/chef4.webp";
 import chef5 from "./webp/chef5.webp";
 import chef6 from "./webp/chef6.webp";
 
+import aboutBg from "./webp/aboutBg1.webp";
+
 export {
-    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04,kFood05, kFood06, kFood07, pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6
+    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04,kFood05, kFood06, kFood07, pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6, 
+    
+    aboutBg
 }

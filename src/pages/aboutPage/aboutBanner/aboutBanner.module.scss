@@ -1,0 +1,33 @@
+@import "../../../assets/styles/main.scss";
+
+.aboutBanner {
+    min-height: 600px;
+    background-image: url("../../../assets/images/webp/aboutBg2.webp");
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .aboutBannerHead{
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            @include font75;
+            color: var(--font-white);
+            text-align: center;
+        }
+    }
+}

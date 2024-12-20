@@ -40,7 +40,6 @@
 
             h1 {
                 @include font75;
-                font-family: var(--font-family-oswald);
                 color: var(--font-white);
                 text-transform: uppercase;
                 margin-top: 10px;
