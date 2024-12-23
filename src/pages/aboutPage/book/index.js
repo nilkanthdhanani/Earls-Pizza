@@ -51,10 +51,10 @@ export default function Book() {
                     <form>
                         <div className={styles.inputs}>
                             <div className={styles.inputsDiv}>
-                                <input type="text" name="name" id="name" placeholder="Your Name *" required />
+                                <input type="text" name="name" id="name" placeholder="Your Name *" required aria-label='name' />
                             </div>
                             <div className={styles.inputsDiv}>
-                                <input type="email" name="email" id="email" placeholder="Your email *" required />
+                                <input type="email" name="email" id="email" placeholder="Your email *" required aria-label='email' />
                             </div>
                             <div className={styles.inputsDiv}>
                                 <div className={styles.customSelect} ref={dropdownRef}>
@@ -76,7 +76,7 @@ export default function Book() {
                                 </div>
                             </div>
                             <div className={styles.inputsDiv}>
-                                <input type="date" name="date" id="date" required />
+                                <input type="date" name="date" id="date" required aria-label='date' />
                             </div>
                         </div>
                         <div className={styles.bookBtn}>
