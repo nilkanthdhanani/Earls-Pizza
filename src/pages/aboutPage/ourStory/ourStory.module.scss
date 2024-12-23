@@ -1,0 +1,43 @@
+@import "../../../assets/styles/main.scss";
+
+.ourStory {
+    padding: 100px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .ourStoryText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin-bottom: 15px;
+
+            span {
+                color: var(--font-gold);
+            }
+        }
+
+        p {
+            @include commonPera;
+            color: var(--font-gray);
+            max-width: 800px;
+        }
+
+        a {
+            display: inline-block;
+        }
+    }
+}

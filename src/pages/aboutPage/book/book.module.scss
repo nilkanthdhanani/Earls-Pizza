@@ -1,0 +1,144 @@
+@import "../../../assets/styles/main.scss";
+
+.book {
+    padding: 100px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .bookDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        @include breakpoint("md-max") {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        @include breakpoint("sm-max") {
+            gap: 30px;
+        }
+    }
+
+    .bookDivHead {
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin: 10px 0 15px 0;
+
+            span {
+                color: var(--font-gold);
+            }
+        }
+
+        p {
+            @include commonPera;
+            color: var(--font-gray);
+            margin: 20px 0 25px 0;
+            max-width: 600px;
+        }
+    }
+
+    form {
+        .inputs {
+            width: 100%;
+
+            .inputsDiv {
+                margin-bottom: 50px;
+
+                @include breakpoint("sm-max") {
+                    margin-bottom: 30px;
+                }
+
+                input {
+                    padding: 15px;
+                    width: 100%;
+                    border: 1px solid var(--border-color);
+                    background-color: var(--bg-main);
+                    @include font16;
+                    font-family: var(--font-family-josefin);
+                    color: var(--font-white);
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                input::-webkit-outer-spin-button,
+                input::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                ::placeholder {
+                    color: var(--font-gray);
+                }
+            }
+
+            .customSelect {
+                position: relative;
+
+                .select {
+                    padding: 15px;
+                    width: 100%;
+                    border: 1px solid var(--border-color);
+                    background-color: var(--bg-main);
+                    @include font16;
+                    font-family: var(--font-family-josefin);
+                    color: var(--font-white);
+                    cursor: pointer;
+                    position: relative;
+
+                    .dropIcon {
+                        position: absolute;
+                        top: 15px;
+                        right: 15px;
+
+                        svg {
+                            fill: var(--font-white);
+                            transition: transform 0.3s ease;
+                        }
+
+                        &.rotate {
+                            svg {
+                                transform: rotate(-180deg);
+                            }
+                        }
+                    }
+                }
+
+                .dropBox {
+                    position: absolute;
+                    margin-top: 5px;
+                    width: 100%;
+                    top: 100%;
+                    background-color: var(--bg-main);
+                    border: 1px solid rgba(176, 176, 176, 0.2);
+                    z-index: 10;
+
+                    div {
+                        cursor: pointer;
+                        padding: 15px 20px;
+                        @include font16;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-gray);
+
+                        &:hover {
+                            background-color: var(--bg-main2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

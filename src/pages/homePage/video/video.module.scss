@@ -3,13 +3,17 @@
 .video {
     width: 100%;
     min-height: 600px;
-    background-image: url("../../../assets/images/webp/videoBg.png");
+    background-image: url("../../../assets/images/webp/videoBg.webp");
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include breakpoint("sm-max") {
+        min-height: 400px;
+    }
 
     .topRefBtn {
         height: 100px;
@@ -22,8 +26,18 @@
         align-items: center;
         cursor: pointer;
 
+        @include breakpoint("sm-max") {
+            height: 70px;
+            width: 70px;
+        }
+
         svg {
             margin-left: 5px;
+
+            @include breakpoint("sm-max") {
+                width: 30px;
+                height: 30px;
+            }
         }
 
         &::after {
@@ -58,6 +72,11 @@
         @include font50;
         font-family: var(--font-family-tangerine);
         color: var(--font-white);
+
+        @include breakpoint("sm-max") {
+            font-size: 40px;
+            line-height: 40px;
+        }
     }
 }
 

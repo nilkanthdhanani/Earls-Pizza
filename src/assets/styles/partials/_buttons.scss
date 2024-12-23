@@ -54,7 +54,8 @@
     }
 }
 
-.searchBtn, .searchBtn2 {
+.searchBtn,
+.searchBtn2 {
     button {
         padding: 13px;
         background-color: var(--bg-main);
@@ -103,7 +104,10 @@
     }
 }
 
-.welcomeContentText, .viewMoreBtn {
+.welcomeContentText,
+.viewMoreBtn,
+.aboutMain,
+.bookBtn {
     button {
         padding: 11px 34px;
         background-color: var(--bg-main);

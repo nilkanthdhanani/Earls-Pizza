@@ -1,0 +1,98 @@
+@import "../../../assets/styles/main.scss";
+
+.clientReview {
+    .clientReviewHead {
+        text-align: center;
+        padding-bottom: 40px;
+
+        @include breakpoint("sm-max") {
+            padding-bottom: 30px;
+        }
+
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin-bottom: 15px;
+
+            span {
+                color: var(--font-gold);
+            }
+        }
+    }
+
+    .clientReviewSlider {
+        min-width: 1px;
+
+        .reviewBox {
+            .reviewText {
+                padding: 0 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                    margin: 20px 0 20px 0;
+                    max-width: 600px;
+                    text-align: center;
+                }
+
+                .clientImage {
+                    padding: 5px;
+                    border-radius: 50%;
+                    border: 1px solid var(--border-color);
+                    background-color: var(--bg-main2);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+
+                h2 {
+                    @include commonHead;
+                    color: var(--font-white);
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                span {
+                    @include commonPera;
+                    color: var(--font-gold);
+                }
+            }
+        }
+    }
+}
+
+.customNextArrow,
+.customPrevArrow {
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    &::before {
+        display: none;
+    }
+}
+
+.customNextArrow {
+    right: 10px !important;
+}
+
+.customPrevArrow {
+    left: 0 !important;
+}

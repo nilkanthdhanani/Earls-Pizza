@@ -34,10 +34,22 @@ import chef4 from "./webp/chef4.webp";
 import chef5 from "./webp/chef5.webp";
 import chef6 from "./webp/chef6.webp";
 
-import aboutBg from "./webp/aboutBg1.webp";
+import aboutVideoBg from "./webp/aboutVideoBg.webp";
+import pizzaBg from "./webp/pizzaBg.webp";
+import pizzaRotate from "./webp/pizzaRotate.webp";
+import aboutLines from "./webp/aboutLines.webp";
+import experience from "./webp/experience.webp";
+import client1 from "./webp/client1.webp";
+import client2 from "./webp/client2.webp";
+import client3 from "./webp/client3.webp";
+import client4 from "./webp/client4.webp";
+import client5 from "./webp/client5.webp";
+import client6 from "./webp/client6.webp";
+import client7 from "./webp/client7.webp";
+import client8 from "./webp/client8.webp";
 
 export {
     logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04,kFood05, kFood06, kFood07, pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6, 
     
-    aboutBg
+    aboutVideoBg, pizzaBg, pizzaRotate, aboutLines, experience, client1, client2, client3, client4, client5, client6, client7, client8
 }

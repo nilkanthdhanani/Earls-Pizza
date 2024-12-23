@@ -1,0 +1,60 @@
+@import "../../../assets/styles/main.scss";
+
+.experience {
+    padding: 100px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .experienceDiv {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 30px;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        @include breakpoint("sm-max") {
+            gap: 30px;
+        }
+    }
+
+    .experienceDivHead {
+        .welcomeTitle {
+            span {
+                @include commonSpan;
+            }
+        }
+
+        h2 {
+            @include commonHead;
+            font-family: var(--font-family-oswald);
+            color: var(--font-white);
+            margin: 10px 0 15px 0;
+
+            span {
+                display: block;
+                color: var(--font-gold);
+            }
+        }
+
+        p {
+            @include commonPera;
+            color: var(--font-gray);
+            margin-top: 20px;
+            max-width: 600px;
+        }
+    }
+
+    .experienceDivImage {
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+        }
+    }
+}

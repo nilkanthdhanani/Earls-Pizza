@@ -1,1 +1,136 @@
 @import "../../../assets/styles/main.scss";
+
+.aboutMain {
+    padding: 100px 0;
+    position: relative;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .aboutLines {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 50%;
+        max-height: 400px;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .aboutMainGrid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        align-items: center;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .aboutMainText {
+            .welcomeTitle {
+                span {
+                    @include commonSpan;
+                }
+            }
+
+            h2 {
+                @include commonHead;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+                margin: 10px 0 15px 0;
+
+                span {
+                    color: var(--font-gold);
+                }
+            }
+
+            p {
+                @include commonPera;
+                color: var(--font-gray);
+                margin: 20px 0 25px 0;
+                max-width: 600px;
+            }
+
+            a {
+                display: inline-block;
+            }
+        }
+
+        .aboutMainImage {
+            position: relative;
+            padding-left: 100px;
+
+            @include breakpoint("sm-max") {
+                padding-left: 0;
+            }
+
+            .pizzaRotate {
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                z-index: 1;
+                animation: rotate 10s linear infinite;
+
+                @include breakpoint("lg-max") {
+                    bottom: -100px;
+                }
+
+                @include breakpoint("sm-max") {
+                    bottom: -50px;
+                }
+
+                img {
+                    max-width: 250px;
+                    height: auto;
+
+                    @include breakpoint("md-max") {
+                        max-width: 200px;
+                    }
+
+                    @include breakpoint("sm-max") {
+                        max-width: 100px;
+                    }
+                }
+            }
+
+            .pizzaBg {
+                position: relative;
+
+                @include breakpoint("lg-max") {
+                    max-width: 500px;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+
+                    @include breakpoint("lg-max") {
+                        aspect-ratio: unset;
+                    }
+                }
+            }
+        }
+    }
+}

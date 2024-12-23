@@ -48,7 +48,7 @@ export default function Reservation() {
                     <div className={styles.resDivContent}>
                         <div className={styles.resDivContentHead}>
                             <div className={styles.welcomeTitle}><span>Reservations</span></div>
-                            <h2>Batter food<span>forever</span></h2>
+                            <h2>Batter food <span>forever</span></h2>
                             <div className={styles.vintageBorder}>
                                 <Image src={vintageBorder} alt="vintageBorder" />
                             </div>

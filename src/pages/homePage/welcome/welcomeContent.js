@@ -36,7 +36,7 @@ export default function WelcomeContent() {
                 <div className={styles.vintageBorder}>
                     <Image src={vintageBorder} alt="vintageBorder" />
                 </div>
-                <p>Our pizzas are crafted with passion and perfection, using the freshest ingredients to deliver an unforgettable taste. From the rich, hand-stretched dough to our signature sauces and toppings, every bite is a celebration of flavor. Whether you crave classic recipes or bold, creative combinations, we’re dedicated to serving the best pizza experience in town!</p>
+                <p>Our pizzas are crafted with passion and perfection, using the freshest ingredients to deliver an unforgettable taste. From the rich, hand-stretched dough to our signature sauces and toppings, every bite is a celebration of flavor. Whether you crave classic recipes or bold, creative combinations, we're dedicated to serving the best pizza experience in town!</p>
                 <Link href={"/about"}>
                     <button type="button"><span>Get The All Information</span></button>
                 </Link>
