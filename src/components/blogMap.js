@@ -11,7 +11,7 @@ const blogMap = [
         title: "Exploring the Art of Perfect Pizza: A Slice Above the Rest",
         description: "Dive into the world of handcrafted pizzas, where tradition meets creativity. Explore recipes, topping ideas, and secrets to crafting the perfect pie. From classic margheritas to bold gourmet innovations, discover the history and artistry behind pizza-making. Whether you're a home chef or a pizzeria enthusiast, our blog offers tips and inspiration to elevate your pizza game. Join us in celebrating the love and passion for everyone's favorite comfort food—one delicious slice at a time!",
         description2: "Discover how every pizza tells a story, blending regional traditions with modern tastes. From hand-stretched dough to exotic toppings, pizza is a canvas for culinary creativity. Uncover how small changes in technique and ingredients can lead to a completely different flavor profile.",
-        description3: "Celebrate the heritage of pizza-making with our insights into its evolution. Learn how simple ingredients like flour, water, and tomatoes can create something truly magical. The possibilities are endless when passion meets the art of pizza-making.",
+        description3: "Celebrate the heritage of pizza-making with our insights into its evolution. Learn how simple ingredients like flour, water, and tomatoes can create something truly magical. The possibilities are endless when passion meets the art of pizza-making .",
     },
     {
         id: 2,
