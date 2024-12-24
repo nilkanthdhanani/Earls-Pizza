@@ -6,7 +6,7 @@ import RightChevronIcon from '@/assets/images/svg/rightChevron';
 import UserIcon from '@/assets/images/svg/userIcon';
 import CalendarIcon from '@/assets/images/svg/calendarIcon';
 import ChatIcon from '@/assets/images/svg/chatIcon';
-import BlogDetails from './blogDetails';
+import BlogDetails from '../blogDetails';
 
 export default function BlogPart1() {
     const [currentPage, setCurrentPage] = useState(1);

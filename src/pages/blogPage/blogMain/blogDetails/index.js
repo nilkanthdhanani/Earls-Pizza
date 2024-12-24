@@ -1,5 +1,5 @@
 import CloseIcon from '@/assets/images/svg/closeIcon';
-import styles from './blogPart1.module.scss';
+import styles from './blogDetails.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import FacebookIcon from '@/assets/images/svg/facebookIcon';
