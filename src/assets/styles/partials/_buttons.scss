@@ -107,7 +107,8 @@
 .welcomeContentText,
 .viewMoreBtn,
 .aboutMain,
-.bookBtn {
+.bookBtn,
+.commentSubmit {
     button {
         padding: 11px 34px;
         background-color: var(--bg-main);
@@ -140,6 +141,57 @@
         &:hover {
             &::after {
                 width: 100%;
+            }
+        }
+    }
+}
+
+.blogNumber {
+    button {
+        padding: 15px;
+        background-color: transparent;
+        border: 1px solid var(--color-white);
+        cursor: pointer;
+        color: var(--font-white);
+        @include font16;
+        font-family: var(--font-family-josefin);
+        transition: all 0.3s ease-in-out;
+
+        @include breakpoint("sm-max") {
+            padding: 10px;
+        }
+        
+        svg {
+            display: block;
+            fill: var(--font-white);
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:first-child {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        &:hover {
+            color: var(--font-gold);
+            border-color: var(--border-color);
+
+            svg {
+                fill: var(--font-gold);
+            }
+        }
+
+        &:disabled {
+            display: none;
+        }
+
+        &.activePage {
+            color: var(--font-gold);
+            border-color: var(--border-color);
+
+            svg {
+                fill: var(--font-gold);
             }
         }
     }

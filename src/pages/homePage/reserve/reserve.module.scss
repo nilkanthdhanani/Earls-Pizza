@@ -41,6 +41,7 @@
 
             h2 {
                 @include font28bold;
+                font-family: var(--font-family-oswald);
                 color: var(--font-white);
             }
         }

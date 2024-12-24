@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import styles from './aboutBanner.module.scss';
+import styles from './blogBanner.module.scss';
 
-export default function AboutBanner() {
+export default function BlogBanner() {
   const [topPosition, setTopPosition] = useState(-150);
 
   useEffect(() => {
     const handleScroll = () => {
-      const banner = document.querySelector(`.${styles.aboutBanner}`);
+      const banner = document.querySelector(`.${styles.blogBanner}`);
       const bannerRect = banner.getBoundingClientRect();
 
       if (bannerRect.top <= 150 && bannerRect.bottom > 150) {
@@ -29,13 +29,13 @@ export default function AboutBanner() {
   }, []);
 
   return (
-    <section className={styles.aboutBanner}>
+    <section className={styles.blogBanner}>
       <div
-        className={styles.aboutBg}
+        className={styles.blogBg}
         style={{ top: `${topPosition}px` }}
       ></div>
-      <div className={styles.aboutBannerHead}>
-        <h1>About Us</h1>
+      <div className={styles.blogBannerHead}>
+        <h1>Blog</h1>
       </div>
     </section>
   );

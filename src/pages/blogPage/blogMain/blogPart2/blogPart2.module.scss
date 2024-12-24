@@ -1,0 +1,215 @@
+@import "../../../../assets/styles/main.scss";
+
+.blogMainDiv2 {
+    h3 {
+        @include font36;
+        font-weight: 300;
+        font-family: var(--font-family-oswald);
+        color: var(--font-white);
+        padding-bottom: 20px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 80px;
+            border-bottom: 1px solid var(--font-gold);
+            bottom: 0;
+            left: 0;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80px;
+            border-bottom: 1px solid var(--font-gold);
+            bottom: 4px;
+            left: 0;
+        }
+    }
+
+    .companyDetail {
+        margin-bottom: 40px;
+
+        .companyProfile {
+            display: grid;
+            grid-template-columns: 135px 1fr;
+            gap: 30px;
+            padding-top: 20px;
+            
+            @include breakpoint("sm-max") {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            img {
+                max-width: 135px;
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+
+            .companyProfileDetail {
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                    margin-bottom: 10px;
+                }
+
+                span {
+                    @include font20bold;
+                    font-family: var(--font-family-tangerine);
+                    color: var(--font-gold);
+                }
+            }
+        }
+    }
+
+    .categories {
+        margin-bottom: 40px;
+
+        .categoriesList {
+            padding-top: 20px;
+
+            a {
+                max-width: fit-content;
+                display: flex;
+                gap: 12px;
+                @include font20;
+                margin-bottom: 10px;
+                font-family: var(--font-family-josefin);
+                color: var(--font-white);
+                transition: all 0.3s ease-in-out;
+
+                svg {
+                    margin-top: 3px;
+                    fill: var(--font-white);
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    color: var(--font-gold);
+
+                    svg {
+                        fill: var(--font-gold);
+                    }
+                }
+            }
+        }
+    }
+
+    .instagramPost {
+        margin-bottom: 40px;
+
+        .igPost {
+            padding-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+
+            @include breakpoint("sm-max") {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .igPostImg {
+                border-radius: 10px;
+                position: relative;
+                overflow: hidden;
+
+                .igPostop {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease-in-out;
+
+                    svg {
+                        g {
+                            fill: var(--font-white);
+                        }
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    aspect-ratio: 1 / 1;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    .igPostop {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    .resentPost {
+        .resentPostList {
+            padding-top: 20px;
+
+            .resentPostListDiv {
+                display: grid;
+                grid-template-columns: 100px 1fr;
+                align-items: center;
+                gap: 20px;
+
+                @include breakpoint("xs-max") {
+                    grid-template-columns: 1fr;
+                    gap: 10px;
+                }
+
+                .resentPostListImg {
+                    overflow: hidden;
+                    border-radius: 10px;
+                    max-width: 100px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 1 / 1;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+
+                .resentPostListDetail {
+                    span {
+                        @include font20bold;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-gold);
+                    }
+
+                    p {
+                        @include font20;
+                        color: var(--font-white);
+                        font-family: var(--font-family-oswald);
+                        margin-bottom: 10px;
+                    }
+                }
+
+                &:hover {
+                    .resentPostListImg {
+                        img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,417 @@
+@import "../../../../assets/styles/main.scss";
+
+.blogMainDiv1 {
+    @include breakpoint("lg-max") {
+        order: 2;
+    }
+
+    .blogBox {
+        margin-bottom: 40px;
+        border-radius: 20px;
+        overflow: hidden;
+        cursor: pointer;
+
+        .blogBoxImg {
+            overflow: hidden;
+            max-height: 400px;
+
+            img {
+                width: 100%;
+                height: auto;
+                transition: all 0.6s ease-in-out;
+            }
+        }
+
+        .blogBoxDetails {
+            padding: 40px;
+            background-color: var(--bg-main2);
+
+            @include breakpoint("sm-max") {
+                padding: 20px;
+            }
+
+            .blogList {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 20px;
+
+                @include breakpoint("sm-max") {
+                    gap: 10px;
+                }
+
+                .blogListLine {
+                    height: 15px;
+                    border-left: 1px solid var(--font-gray);
+                }
+
+                .blogListText {
+                    display: flex;
+                    gap: 10px;
+
+                    svg {
+                        display: block;
+                        fill: var(--font-gray);
+                    }
+
+                    span {
+                        @include font18bold;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-gray);
+                    }
+                }
+
+                .spanMargin {
+                    svg {
+                        margin-top: 3px;
+                    }
+                }
+            }
+
+            h2 {
+                @include font36Bold;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+                margin: 20px 0;
+
+                @include breakpoint("sm-max") {
+                    font-size: 28px;
+                }
+            }
+
+            p {
+                @include commonPera;
+                color: var(--font-gray);
+            }
+
+            .viewMore {
+                margin-top: 20px;
+                @include font16;
+                font-family: var(--font-family-josefin);
+                color: var(--color-white);
+            }
+        }
+
+        &:hover {
+            .blogBoxImg {
+                img {
+                    transform: scale(1.07);
+                }
+            }
+        }
+    }
+
+    .blogNumber {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .blogDetails {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+        padding: 100px 20px 0 20px;
+        overflow-y: auto;
+
+        .blogDetailsDiv {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: var(--bg-main2);
+            border-radius: 20px;
+            overflow: hidden;
+
+            .blogImage {
+                min-height: 500px;
+                padding: 30px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.6);
+                }
+
+                .closeBtn {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 2;
+                    cursor: pointer;
+                    font-size: 28px;
+
+                    svg {
+                        fill: var(--font-white);
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                h4 {
+                    position: relative;
+                    z-index: 1;
+                    @include commonHead;
+                    color: var(--font-white);
+                }
+            }
+
+            .blogContent {
+                padding: 40px;
+
+                @include breakpoint("sm-max") {
+                    padding: 20px;
+                }
+
+                .blogList {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 10px 20px;
+
+                    .blogListLine {
+                        height: 15px;
+                        width: 1px;
+                        background-color: var(--font-gray);
+                    }
+
+                    .blogListText {
+                        display: flex;
+                        gap: 10px;
+
+                        span {
+                            @include font18bold;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-gray);
+                        }
+                    }
+                }
+
+                .blogDetailsList {
+                    p {
+                        @include commonPera;
+                        color: var(--font-gray);
+                        margin-top: 20px;
+                    }
+                }
+
+                .tagsDiv {
+                    margin: 20px 0;
+                    padding: 15px;
+                    border-width: 1px 0px 1px 0px;
+                    border-style: solid;
+                    border-color: var(--font-gray);
+                    display: flex;
+                    justify-content: space-between;
+
+                    @include breakpoint("sm-max") {
+                        flex-direction: column;
+                    }
+
+                    .tags {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        span {
+                            @include font18bold;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-gray);
+                        }
+
+                        p {
+                            @include font16;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-white);
+                        }
+                    }
+
+                    .socialLinks {
+                        margin-top: 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+
+                        svg {
+                            fill: var(--color-white);
+                            transition: all 0.3s ease-in-out;
+
+                            &:hover {
+                                fill: var(--font-gold);
+                            }
+                        }
+                    }
+                }
+
+                .comments {
+                    margin-top: 40px;
+
+                    h5 {
+                        @include font28bold;
+                        font-family: var(--font-family-oswald);
+                        color: var(--font-white);
+                    }
+
+                    .comment {
+                        padding: 15px 0;
+                        border-bottom: 1px solid var(--border-color2);
+                        margin-top: 20px;
+                        display: grid;
+                        grid-template-columns: 100px 1fr;
+                        align-items: center;
+                        gap: 20px;
+
+                        @include breakpoint("sm-max") {
+                            grid-template-columns: 1fr;
+                        }
+
+                        .commentImg {
+                            max-width: 100px;
+                            
+                            img {
+                                width: 100%;
+                                height: auto;
+                                aspect-ratio: 1 / 1;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        .commentText {
+                            h6 {
+                                @include font18bold;
+                                font-family: var(--font-family-josefin);
+                                color: var(--font-white);
+                            }
+
+                            span {
+                                @include font16;
+                                font-family: var(--font-family-josefin);
+                                color: var(--font-gold);
+                            }
+
+                            p {
+                                @include font16;
+                                font-family: var(--font-family-josefin);
+                                color: var(--font-gray);
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+
+                form {
+                    margin-top: 40px;
+
+                    h5 {
+                        @include font28bold;
+                        font-family: var(--font-family-oswald);
+                        color: var(--font-white);
+                    }
+
+                    .commentForm {
+                        margin-top: 20px;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 20px;
+
+                        @include breakpoint("sm-max") {
+                            grid-template-columns: 1fr;
+                            gap: 0;
+                        }
+                    }
+
+                    .commentInput {
+                        margin-bottom: 15px;
+
+                        input,
+                        textarea {
+                            width: 100%;
+                            padding: 15px 17px;
+                            background-color: var(--bg-main);
+                            border: 1px solid var(--border-color2);
+                            @include font16;
+                            color: var(--font-white);
+                            font-family: var(--font-family-josefin);
+                        }
+                    }
+
+                    .checkboxDiv {
+                        display: flex;
+                        gap: 10px;
+                        margin: 15px 0 20px 0;
+
+                        label {
+                            cursor: pointer;
+                            @include font16;
+                            color: var(--font-white);
+                            font-family: var(--font-family-josefin);
+                        }
+
+                        input {
+                            position: absolute;
+                            margin: 0;
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            opacity: 0;
+
+                            &:checked + span svg path {
+                                stroke-dashoffset: 0;
+                            }
+                        }
+
+                        input + span {
+                            display: block;
+                            border: 1px solid var(--font-white);
+                            width: 20px;
+                            height: 20px;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+
+                            &:active {
+                                transform: scale(1.05);
+                            }
+
+                            svg {
+                                pointer-events: none;
+                                padding: 10%;
+
+                                path {
+                                    fill: none;
+                                    stroke: var(--font-white);
+                                    stroke-width: 6px;
+                                    stroke-linecap: round;
+                                    stroke-linejoin: round;
+                                    stroke-dasharray: 100;
+                                    stroke-dashoffset: 101;
+                                    transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
