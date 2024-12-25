@@ -7,9 +7,20 @@ import "react-loading-skeleton/dist/skeleton.css";
 import Footer from "@/common/footer";
 import Header from "@/common/header";
 import TopRef from "@/common/topRef";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
+  useEffect(() => {
+    Aos.init({
+      offset: 120,
+      duration: 1200,
+      easing: "ease",
+    });
+  }, []);
+
   return (
     <html lang="en">
       <head>

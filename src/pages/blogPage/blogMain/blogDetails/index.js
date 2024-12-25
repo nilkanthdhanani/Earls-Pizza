@@ -12,7 +12,7 @@ export default function BlogDetails({ blog, onClose }) {
 
     return (
         <div className={styles.blogDetails} onClick={onClose} >
-            <div className={styles.blogDetailsDiv} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.blogDetailsDiv} onClick={(e) => e.stopPropagation()} data-aos="fade-up">
                 <div className={styles.blogImage}>
                     <div className={styles.closeBtn} onClick={onClose}>
                         <CloseIcon />
