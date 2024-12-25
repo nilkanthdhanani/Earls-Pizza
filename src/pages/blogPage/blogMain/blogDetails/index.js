@@ -7,12 +7,16 @@ import LinkdInIcon from '@/assets/images/svg/linkdInIcon';
 import TwitterIcon from '@/assets/images/svg/twitterIcon';
 import { client5, client6 } from '@/assets/images/image';
 
-export default function BlogDetails({ blog, closeModal }) {
+export default function BlogDetails({ blog, onClose }) {
+    if (!blog) return null;
+
     return (
-        <div className={styles.blogDetails}>
-            <div className={styles.blogDetailsDiv}>
+        <div className={styles.blogDetails} onClick={onClose} >
+            <div className={styles.blogDetailsDiv} onClick={(e) => e.stopPropagation()}>
                 <div className={styles.blogImage}>
-                    <div className={styles.closeBtn} onClick={closeModal}><CloseIcon /></div>
+                    <div className={styles.closeBtn} onClick={onClose}>
+                        <CloseIcon />
+                    </div>
                     <Image src={blog.image} alt={blog.title} />
                     <h4>{blog.title}</h4>
                 </div>
@@ -66,7 +70,7 @@ export default function BlogDetails({ blog, closeModal }) {
                         </div>
                         <div className={styles.comment}>
                             <div className={styles.commentImg}>
-                                <Image src={client6} alt="client5" />
+                                <Image src={client6} alt="client6" />
                             </div>
                             <div className={styles.commentText}>
                                 <h6>Nabby Gail</h6>
