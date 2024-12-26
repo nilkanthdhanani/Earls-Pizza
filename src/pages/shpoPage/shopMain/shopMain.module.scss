@@ -12,89 +12,23 @@
         grid-template-columns: 1fr 25%;
         gap: 30px;
 
-        .shopDiv1 {
-            .shopDiv1Head {
-                display: flex;
-                justify-content: space-between;
-
-                .shopDiv1HeadView {
-                    display: flex;
-                    align-items: center;
-                    gap: 20px;
-
-                    .iconWrap {
-                        height: 30px;
-                        width: 30px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-                        
-                        &.active {
-                            border: 1px solid var(--color-white);
-                        }
-                    }
-                }
-
-                .customSelect {
-                    position: relative;
-                    min-width: 200px;
-
-                    .select {
-                        padding: 15px;
-                        width: 100%;
-                        border: 1px solid var(--border-color);
-                        background-color: var(--bg-main);
-                        @include font16;
-                        font-family: var(--font-family-josefin);
-                        color: var(--font-white);
-                        cursor: pointer;
-                        position: relative;
-
-                        .dropIcon {
-                            position: absolute;
-                            top: 15px;
-                            right: 15px;
-
-                            svg {
-                                fill: var(--font-white);
-                                transition: transform 0.3s ease;
-                            }
-
-                            &.rotate {
-                                svg {
-                                    transform: rotate(-180deg);
-                                }
-                            }
-                        }
-                    }
-
-                    .dropBox {
-                        position: absolute;
-                        margin-top: 5px;
-                        width: 100%;
-                        top: 100%;
-                        background-color: var(--bg-main);
-                        border: 1px solid rgba(176, 176, 176, 0.2);
-                        z-index: 10;
-
-                        div {
-                            cursor: pointer;
-                            padding: 15px 20px;
-                            @include font16;
-                            font-family: var(--font-family-josefin);
-                            color: var(--font-gray);
-
-                            &:hover {
-                                background-color: var(--bg-main2);
-                            }
-                        }
-                    }
-                }
-            }
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+            gap: 40px;
         }
 
         .shopDiv2 {
+            @include breakpoint("lg-max") {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+
+            @include breakpoint("sm-max") {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
             h2 {
                 @include font36;
                 font-weight: 300;
@@ -126,6 +60,10 @@
             .priceFilter {
                 margin-bottom: 50px;
 
+                @include breakpoint("lg-max") {
+                    margin-bottom: 0;
+                }
+
                 p {
                     @include commonPera;
                     color: var(--font-gray);
@@ -135,6 +73,10 @@
 
             .openingTime {
                 margin-bottom: 50px;
+
+                @include breakpoint("lg-max"){
+                    margin-bottom: 0;
+                }
 
                 p {
                     @include commonPera;

@@ -109,7 +109,8 @@
 .aboutMain,
 .bookBtn,
 .commentSubmit,
-.priceFilter {
+.priceFilter,
+.priceDiv {
     button {
         padding: 11px 34px;
         background-color: var(--bg-main);
@@ -147,7 +148,8 @@
     }
 }
 
-.blogNumber {
+.blogNumber,
+.pageNumber {
     button {
         padding: 15px;
         background-color: transparent;
@@ -161,7 +163,7 @@
         @include breakpoint("sm-max") {
             padding: 10px;
         }
-        
+
         svg {
             display: block;
             fill: var(--font-white);

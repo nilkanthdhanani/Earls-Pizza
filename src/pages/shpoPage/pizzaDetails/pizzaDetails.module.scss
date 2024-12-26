@@ -1,0 +1,273 @@
+@import "../../../assets/styles/main.scss";
+
+.pizzaDetails {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    padding: 100px 20px 0 20px;
+    overflow-y: auto;
+
+    .pizzaDetailsDiv {
+        max-width: 750px;
+        margin: 0 auto;
+        background-color: var(--bg-main2);
+        border-radius: 20px;
+        overflow: hidden;
+
+        .pizzaImage {
+            min-height: 500px;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .closeBtn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                height: 45px;
+                width: 45px;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.6);
+                cursor: pointer;
+
+                svg {
+                    fill: var(--font-white);
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .pizzaContent {
+            padding: 40px;
+
+            @include breakpoint("sm-max") {
+                padding: 20px;
+            }
+
+            .pizzaContentHead {
+                h4 {
+                    @include font36Bold;
+                    font-family: var(--font-family-oswald);
+                    color: var(--font-white);
+                }
+
+                .stars {
+                    display: flex;
+                    gap: 5px;
+                    margin: 15px 0;
+
+                    svg {
+                        fill: var(--font-gray);
+                    }
+                }
+
+                p {
+                    @include commonPera;
+                    color: var(--font-gray);
+                }
+            }
+
+            .priceDiv {
+                .price {
+                    padding-top: 30px;
+                    display: grid;
+                    grid-template-columns: 1fr 170px;
+                    align-items: center;
+                    gap: 20px;
+
+                    @include breakpoint("sm-max") {
+                        grid-template-columns: 1fr;
+                        gap: 10px;
+                    }
+
+                    .priceBox {
+                        p {
+                            @include font20;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-white);
+
+                            span {
+                                color: var(--font-gold);
+                            }
+                        }
+                    }
+
+                    .totalBox {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 30px;
+
+                        input {
+                            width: 70px;
+                            padding: 10px;
+                            text-align: center;
+                            background-color: transparent;
+                            border: 1px solid var(--bg-gold);
+                            @include font16;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-white);
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                        
+                        span {
+                            text-align: end;
+                            @include font16;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-white);
+                        }
+                    }
+                }
+
+                .totalMain {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px 0;
+                    border-top: 1px solid var(--border-color2);
+                    border-bottom: 1px solid var(--border-color2);
+                    margin: 30px 0;
+
+                    p {
+                        @include font20;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-white);
+                    }
+                        
+                    span {
+                        text-align: end;
+                        @include font16;
+                        font-family: var(--font-family-josefin);
+                        color: var(--font-white);
+                    }
+                }
+            }
+
+            form {
+                margin-top: 40px;
+
+                h5 {
+                    @include font20bold;
+                    font-family: var(--font-family-oswald);
+                    color: var(--font-white);
+                }
+
+                .commentForm {
+                    margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 20px;
+
+                    @include breakpoint("sm-max") {
+                        grid-template-columns: 1fr;
+                        gap: 0;
+                    }
+                }
+
+                .commentInput {
+                    margin-bottom: 15px;
+
+                    input,
+                    textarea {
+                        width: 100%;
+                        padding: 15px 17px;
+                        background-color: var(--bg-main);
+                        border: 1px solid var(--border-color2);
+                        @include font16;
+                        color: var(--font-white);
+                        font-family: var(--font-family-josefin);
+                    }
+                }
+
+                .checkboxDiv {
+                    display: flex;
+                    gap: 10px;
+                    margin: 15px 0 20px 0;
+
+                    label {
+                        cursor: pointer;
+                        @include font16;
+                        color: var(--font-white);
+                        font-family: var(--font-family-josefin);
+                    }
+
+                    input {
+                        position: absolute;
+                        margin: 0;
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        opacity: 0;
+
+                        &:checked + span svg path {
+                            stroke-dashoffset: 0;
+                        }
+                    }
+
+                    input + span {
+                        display: block;
+                        border: 1px solid var(--font-white);
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        transition: all 0.2s ease;
+
+                        &:active {
+                            transform: scale(1.05);
+                        }
+
+                        svg {
+                            pointer-events: none;
+                            padding: 10%;
+
+                            path {
+                                fill: none;
+                                stroke: var(--font-white);
+                                stroke-width: 6px;
+                                stroke-linecap: round;
+                                stroke-linejoin: round;
+                                stroke-dasharray: 100;
+                                stroke-dashoffset: 101;
+                                transition: all 250ms cubic-bezier(1, 0, 0.37, 0.91);
+                            }
+                        }
+                    }
+                }
+
+                .stars {
+                    margin: 20px 0;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    svg {
+                        cursor: pointer;
+                        stroke: var(--font-white);
+                        stroke-width: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
