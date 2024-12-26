@@ -44,3 +44,32 @@ textarea {
     width: 0;
     height: 0;
 }
+
+.MuiSlider-root {
+    color: var(--bg-gold) !important;
+    height: 2px !important;
+    box-shadow: none !important;
+}
+
+.MuiSlider-thumb {
+    background-color: var(--bg-gold) !important;
+    width: 5px !important;
+    height: 20px !important;
+    border-radius: 0% !important;
+    box-shadow: none !important;
+}
+
+.MuiSlider-thumb:hover {
+    background-color: var(--bg-gold) !important;
+    box-shadow: none !important;
+}
+
+.MuiSlider-track {
+    background-color: var(--bg-gold) !important;
+    border: none !important;
+}
+
+.MuiSlider-rail {
+    background-color: var(--bg-gold) !important;
+    border: none !important;
+}

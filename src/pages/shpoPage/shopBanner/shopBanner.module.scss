@@ -1,0 +1,42 @@
+@import "../../../assets/styles/main.scss";
+
+.shopBanner {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    .shopBg {
+        position: absolute;
+        left: 0;
+        height: calc(100% + 150px);
+        width: 100%;
+        background-image: url("../../../assets/images/webp/shopBg.webp");
+        background-size: cover;
+        background-position: bottom;
+        transition: 0.6s ease-out;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .shopBannerHead{
+        position: relative;
+        z-index: 1;
+        
+        h1 {
+            @include font75;
+            color: var(--font-white);
+            text-align: center;
+        }
+    }
+}

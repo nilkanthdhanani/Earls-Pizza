@@ -14,6 +14,18 @@ import kFood04 from "./webp/kFood04.webp";
 import kFood05 from "./webp/kFood05.webp";
 import kFood06 from "./webp/kFood06.webp";
 import kFood07 from "./webp/kFood07.webp";
+import clock from "./webp/clock.webp";
+import tometo from "./webp/tometo.webp";
+import reviewBg from "./webp/reviewBg.webp";
+import pizzaDetail from "./webp/pizzaDetail.webp";
+import chef1 from "./webp/chef1.webp";
+import chef2 from "./webp/chef2.webp";
+import chef3 from "./webp/chef3.webp";
+import chef4 from "./webp/chef4.webp";
+import chef5 from "./webp/chef5.webp";
+import chef6 from "./webp/chef6.webp";
+
+//pizza
 import pizza1 from "./webp/pizza1.webp";
 import pizza2 from "./webp/pizza2.webp";
 import pizza3 from "./webp/pizza3.webp";
@@ -29,16 +41,31 @@ import pizza12 from "./webp/pizza12.webp";
 import pizza13 from "./webp/pizza13.webp";
 import pizza14 from "./webp/pizza14.webp";
 import pizza15 from "./webp/pizza15.webp";
-import clock from "./webp/clock.webp";
-import tometo from "./webp/tometo.webp";
-import reviewBg from "./webp/reviewBg.webp";
-import pizzaDetail from "./webp/pizzaDetail.webp";
-import chef1 from "./webp/chef1.webp";
-import chef2 from "./webp/chef2.webp";
-import chef3 from "./webp/chef3.webp";
-import chef4 from "./webp/chef4.webp";
-import chef5 from "./webp/chef5.webp";
-import chef6 from "./webp/chef6.webp";
+import pizza16 from "./webp/pizza16.webp";
+import pizza17 from "./webp/pizza17.webp";
+import pizza18 from "./webp/pizza18.webp";
+import pizza19 from "./webp/pizza19.webp";
+import pizza20 from "./webp/pizza20.webp";
+import pizza21 from "./webp/pizza21.webp";
+import pizza22 from "./webp/pizza22.webp";
+import pizza23 from "./webp/pizza23.webp";
+import pizza24 from "./webp/pizza24.webp";
+import pizza25 from "./webp/pizza25.webp";
+import pizza26 from "./webp/pizza26.webp";
+import pizza27 from "./webp/pizza27.webp";
+import pizza28 from "./webp/pizza28.webp";
+import pizza29 from "./webp/pizza29.webp";
+import pizza30 from "./webp/pizza30.webp";
+import pizza31 from "./webp/pizza31.webp";
+import pizza32 from "./webp/pizza32.webp";
+import pizza33 from "./webp/pizza33.webp";
+import pizza34 from "./webp/pizza34.webp";
+import pizza35 from "./webp/pizza35.webp";
+import pizza36 from "./webp/pizza36.webp";
+import pizza37 from "./webp/pizza37.webp";
+import pizza38 from "./webp/pizza38.webp";
+import pizza39 from "./webp/pizza39.webp";
+import pizza40 from "./webp/pizza40.webp";
 
 // about page
 import aboutVideoBg from "./webp/aboutVideoBg.webp";
@@ -70,9 +97,11 @@ import post10 from "./webp/post10.webp";
 import post11 from "./webp/post11.webp";
 
 export {
-    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04,kFood05, kFood06, kFood07, pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10, pizza11, pizza12, pizza13, pizza14, pizza15, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6, 
-    
-    aboutVideoBg, pizzaBg, pizzaRotate, aboutLines, experience, client1, client2, client3, client4, client5, client6, client7, client8, 
-    
+    logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04, kFood05, kFood06, kFood07, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6,
+
+    pizza1, pizza2, pizza3, pizza4, pizza5, pizza6, pizza7, pizza8, pizza9, pizza10, pizza11, pizza12, pizza13, pizza14, pizza15, pizza16, pizza17, pizza18, pizza19, pizza20, pizza21, pizza22, pizza23, pizza24, pizza25, pizza26, pizza27, pizza28, pizza29, pizza30, pizza31, pizza32, pizza33, pizza34, pizza35, pizza36, pizza37, pizza38, pizza39, pizza40,
+
+    aboutVideoBg, pizzaBg, pizzaRotate, aboutLines, experience, client1, client2, client3, client4, client5, client6, client7, client8,
+
     profile, post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11,
 }
