@@ -63,12 +63,7 @@ export default function ShopDiv1() {
     const buttons = [];
     for (let i = startPage; i <= endPage; i++) {
       buttons.push(
-        <button
-          key={i}
-          type="button"
-          className={currentPage === i ? styles.activePage : ''}
-          onClick={() => goToPage(i)}
-        >
+        <button key={i} type="button" className={currentPage === i ? styles.activePage : ''} onClick={() => goToPage(i)}>
           {i}
         </button>
       );
@@ -127,30 +122,18 @@ export default function ShopDiv1() {
                     <StarIcon key={index} fill={index < data.rating ? 'white' : 'gray'} />
                   ))}
                 </div>
-                <p>
-                  <span>{data.price}</span> - <span>{data.discountPrice}</span>
-                </p>
+                <p><span>{data.price}</span> - <span>{data.discountPrice}</span></p>
               </div>
             </div>
           </div>
         ))}
       </div>
       <div className={styles.pageNumber}>
-        <button
-          type="button"
-          onClick={() => goToPage(currentPage - 1)}
-          disabled={currentPage === 1}
-          aria-label="Previous"
-        >
+        <button type="button" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1} aria-label="Previous">
           <RightChevronIcon />
         </button>
         {getPaginationButtons()}
-        <button
-          type="button"
-          onClick={() => goToPage(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          aria-label="Next"
-        >
+        <button type="button" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages} aria-label="Next">
           <RightChevronIcon />
         </button>
       </div>

@@ -44,12 +44,7 @@ export default function BlogPart1() {
         const buttons = [];
         for (let i = startPage; i <= endPage; i++) {
             buttons.push(
-                <button
-                    key={i}
-                    type="button"
-                    className={currentPage === i ? styles.activePage : ''}
-                    onClick={() => goToPage(i)}
-                >
+                <button key={i} type="button" className={currentPage === i ? styles.activePage : ''} onClick={() => goToPage(i)}>
                     {i}
                 </button>
             );
@@ -99,29 +94,15 @@ export default function BlogPart1() {
                 </div>
             ))}
             <div className={styles.blogNumber}>
-                <button
-                    type="button"
-                    onClick={() => goToPage(currentPage - 1)}
-                    disabled={currentPage === 1}
-                    aria-label="Previous"
-                >
+                <button type="button" onClick={() => goToPage(currentPage - 1)} disabled={currentPage === 1} aria-label="Previous">
                     <RightChevronIcon />
                 </button>
                 {getPaginationButtons()}
-                <button
-                    type="button"
-                    onClick={() => goToPage(currentPage + 1)}
-                    disabled={currentPage === totalPages}
-                    aria-label="Next"
-                >
+                <button type="button" onClick={() => goToPage(currentPage + 1)} disabled={currentPage === totalPages} aria-label="Next">
                     <RightChevronIcon />
                 </button>
             </div>
-            <BlogDetails
-                blog={selectedBlog}
-                isOpen={isModalOpen}
-                onClose={closeModal}
-            />
+            <BlogDetails blog={selectedBlog} isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 }
