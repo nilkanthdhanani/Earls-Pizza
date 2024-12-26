@@ -56,7 +56,7 @@ export default function PizzaDetails({ pizza, onClose }) {
 
     return (
         <div className={styles.pizzaDetails}>
-            <div className={styles.pizzaDetailsDiv} ref={modalRef}>
+            <div className={styles.pizzaDetailsDiv} ref={modalRef} data-aos="fade-up">
                 <div className={styles.pizzaImage}>
                     <div className={styles.closeBtn} onClick={onClose}>
                         <CloseIcon />
@@ -79,13 +79,7 @@ export default function PizzaDetails({ pizza, onClose }) {
                                 <p>Regular (serves 1) <span>{pizza.price}</span></p>
                             </div>
                             <div className={styles.totalBox}>
-                                <input
-                                    type="number"
-                                    value={regularQty}
-                                    onChange={(e) => setRegularQty(Number(e.target.value))}
-                                    min="0"
-                                    max="10"
-                                />
+                                <input type="number" value={regularQty} onChange={(e) => setRegularQty(Number(e.target.value))} min="0" max="10" />
                                 <span>${calculateTotal(regularQty, pizza.price).toFixed(2)}</span>
                             </div>
                         </div>
@@ -94,13 +88,7 @@ export default function PizzaDetails({ pizza, onClose }) {
                                 <p>Medium (serves 2) <span>{pizza.mediumPrice}</span></p>
                             </div>
                             <div className={styles.totalBox}>
-                                <input
-                                    type="number"
-                                    value={mediumQty}
-                                    onChange={(e) => setMediumQty(Number(e.target.value))}
-                                    min="0"
-                                    max="10"
-                                />
+                                <input type="number" value={mediumQty} onChange={(e) => setMediumQty(Number(e.target.value))} min="0" max="10" />
                                 <span>${calculateTotal(mediumQty, pizza.mediumPrice).toFixed(2)}</span>
                             </div>
                         </div>
@@ -109,13 +97,7 @@ export default function PizzaDetails({ pizza, onClose }) {
                                 <p>Large (serves 4) <span>{pizza.largePrice}</span></p>
                             </div>
                             <div className={styles.totalBox}>
-                                <input
-                                    type="number"
-                                    value={largeQty}
-                                    onChange={(e) => setLargeQty(Number(e.target.value))}
-                                    min="0"
-                                    max="10"
-                                />
+                                <input type="number" value={largeQty} onChange={(e) => setLargeQty(Number(e.target.value))} min="0" max="10" />
                                 <span>${calculateTotal(largeQty, pizza.largePrice).toFixed(2)}</span>
                             </div>
                         </div>
@@ -140,7 +122,7 @@ export default function PizzaDetails({ pizza, onClose }) {
                         </div>
                         <div className={styles.stars}>
                             {Array.from({ length: 5 }, (_, index) => (
-                                <StarIcon2 key={index} fill={index < rating ? 'white' : '#0f1d22'} onClick={() => handleStarClick(index)}/>
+                                <StarIcon2 key={index} fill={index < rating ? 'white' : '#0f1d22'} onClick={() => handleStarClick(index)} />
                             ))}
                         </div>
                         <div className={styles.checkboxDiv}>
