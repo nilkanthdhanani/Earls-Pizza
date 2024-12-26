@@ -26,11 +26,8 @@ export default function ShopMain() {
                                 valueLabelDisplay="off"
                                 min={0}
                                 max={1000}
-                                aria-labelledby="range-slider"
+                                aria-label="range-slider"
                             />
-                            <label id="price-range-slider" className={styles.visuallyHidden}>
-                                Price Range Slider
-                            </label>
                             <p>Price: ${priceRange[0]} - ${priceRange[1]}</p>
                             <button type="button"><span>Filter</span></button>
                         </div>
