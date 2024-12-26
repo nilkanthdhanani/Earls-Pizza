@@ -121,7 +121,7 @@ export default function ShopDiv1() {
             </div>
             <div className={styles.pizzaBoxContent}>
               <div className={styles.pizzaBoxContentHead}>
-                <h3>{data.name}</h3>
+                <h2>{data.name}</h2>
                 <div className={styles.stars}>
                   {Array.from({ length: 5 }, (_, index) => (
                     <StarIcon key={index} fill={index < data.rating ? 'white' : 'gray'} />

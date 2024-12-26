@@ -19,7 +19,7 @@ export default function ShopMain() {
                     <ShopDiv1 />
                     <div className={styles.shopDiv2}>
                         <div className={styles.priceFilter}>
-                            <h2>Filter by Price</h2>
+                            <h3>Filter by Price</h3>
                             <Slider
                                 value={priceRange}
                                 onChange={handlePriceChange}
@@ -28,18 +28,21 @@ export default function ShopMain() {
                                 max={1000}
                                 aria-labelledby="range-slider"
                             />
+                            <label id="price-range-slider" className={styles.visuallyHidden}>
+                                Price Range Slider
+                            </label>
                             <p>Price: ${priceRange[0]} - ${priceRange[1]}</p>
                             <button type="button"><span>Filter</span></button>
                         </div>
                         <div className={styles.openingTime}>
-                            <h2>Opening Time</h2>
+                            <h3>Opening Time</h3>
                             <p>Monday - Friday 09:00 - 22:00</p>
                             <p>Saturday 11:00 - 00:00</p>
                             <p>Sunday 11:00 - 23:00</p>
                             <p>* Happy hour 17:00 - 21:00</p>
                         </div>
                         <div className={styles.categoriesList}>
-                            <h2>Categories</h2>
+                            <h3>Categories</h3>
                             <Link href="/shop"><RightChevronIcon />Pizza</Link>
                             <Link href="/shop"><RightChevronIcon />Salads</Link>
                             <Link href="/shop"><RightChevronIcon />Desserts</Link>
