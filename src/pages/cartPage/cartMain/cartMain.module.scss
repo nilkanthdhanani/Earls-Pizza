@@ -1,0 +1,118 @@
+@import "../../../assets/styles/main.scss";
+
+.cartMain {
+    padding: 100px 0;
+
+    @include breakpoint("sm-max") {
+        padding: 60px 0;
+    }
+
+    .cartDiv {
+        display: grid;
+        grid-template-columns: 1fr 25%;
+        gap: 30px;
+
+        @include breakpoint("lg-max") {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .cartDetails {
+        }
+
+        .cartMainTotal {
+            h3 {
+                @include font36;
+                font-weight: 300;
+                font-family: var(--font-family-oswald);
+                color: var(--font-white);
+                padding-bottom: 20px;
+                margin-bottom: 30px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    border-bottom: 1px solid var(--font-gold);
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    border-bottom: 1px solid var(--font-gold);
+                    bottom: 4px;
+                    left: 0;
+                }
+            }
+
+            .offers {
+                margin-bottom: 50px;
+
+                .offersDiv {
+                    padding: 15px;
+                    border-radius: 5px;
+                    background-color: var(--bg-main2);
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    align-items: center;
+                    cursor: pointer;
+                    gap: 20px;
+
+                    svg {
+                        fill: var(--font-white);
+                        
+                        &:first-child {
+                            stroke: var(--font-white);
+                            stroke-width: 2px;
+                        }
+                    }
+
+                    .offersDivText {
+                        p {
+                            @include commonPera;
+                            color: var(--font-white);
+                        }
+
+                        span {
+                            @include font14;
+                            color: var(--font-gray);
+                        }
+                    }
+                }
+            }
+
+            .cartMainTotalBox {
+                margin-bottom: 50px;
+
+                .offersDiv {
+                    padding: 20px;
+                    border-radius: 5px;
+                    background-color: var(--bg-main2);
+
+                    .offersTotalText {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 15px;
+
+                        p {
+                            @include commonPera;
+                            color: var(--font-white);
+                        }
+                        
+                        span {
+                            @include font16;
+                            font-weight: 500;
+                            font-family: var(--font-family-josefin);
+                            color: var(--font-white);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -110,7 +110,8 @@
 .bookBtn,
 .commentSubmit,
 .priceFilter,
-.priceDiv {
+.priceDiv,
+.cartMainTotalBox {
     button {
         padding: 11px 34px;
         background-color: var(--bg-main);
@@ -145,6 +146,12 @@
                 width: 100%;
             }
         }
+    }
+}
+
+.cartMainTotalBox {
+    button {
+        width: 100%;
     }
 }
 

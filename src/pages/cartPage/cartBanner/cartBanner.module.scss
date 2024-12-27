@@ -1,0 +1,42 @@
+@import "../../../assets/styles/main.scss";
+
+.cartBanner {
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    .cartBg {
+        position: absolute;
+        left: 0;
+        height: calc(100% + 150px);
+        width: 100%;
+        background-image: url("../../../assets/images/webp/cartBg.webp");
+        background-size: cover;
+        background-position: center;
+        transition: 0.6s ease-out;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .cartBannerHead{
+        position: relative;
+        z-index: 1;
+        
+        h1 {
+            @include font75;
+            color: var(--font-white);
+            text-align: center;
+        }
+    }
+}

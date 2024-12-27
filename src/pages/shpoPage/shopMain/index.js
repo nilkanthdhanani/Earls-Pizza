@@ -8,7 +8,7 @@ import ShopDiv1 from './shopDiv1';
 export default function ShopMain() {
     const [priceRange, setPriceRange] = useState([0, 500]);
 
-    const handlePriceChange = (newValue) => {
+    const handlePriceChange = (event, newValue) => {
         setPriceRange(newValue);
     };
 
