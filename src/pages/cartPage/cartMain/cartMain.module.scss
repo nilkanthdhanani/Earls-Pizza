@@ -1,5 +1,13 @@
 @import "../../../assets/styles/main.scss";
 
+.loading {
+    padding: 100px 0;
+    min-height: 800px;
+    color: var(--font-white);
+    @include font20;
+    font-family: var(--font-family-josefin);
+}
+
 .cartMain {
     padding: 100px 0;
 
@@ -95,7 +103,7 @@
                         height: 1px;
                         border-top: 1px solid var(--border-color);
                         
-                        &:first-child {
+                        &:last-child {
                             border-bottom: 1px solid var(--border-color);
                         }
 
