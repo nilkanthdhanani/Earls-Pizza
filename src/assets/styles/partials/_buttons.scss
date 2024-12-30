@@ -111,7 +111,8 @@
 .commentSubmit,
 .priceFilter,
 .priceDiv,
-.cartMainTotalBox {
+.cartMainTotalBox,
+.cartEmptyBox {
     button {
         padding: 11px 34px;
         background-color: var(--bg-main);
@@ -204,5 +205,18 @@
                 fill: var(--font-gold);
             }
         }
+    }
+}
+
+.quantity{
+    button {
+        padding: 5px 10px;
+        background-color: transparent;
+        border: 1px solid var(--font-gold);
+        cursor: pointer;
+        color: var(--font-white);
+        @include font16;
+        font-family: var(--font-family-josefin);
+        transition: all 0.3s ease-in-out;
     }
 }

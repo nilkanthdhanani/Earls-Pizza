@@ -96,6 +96,9 @@ import post9 from "./webp/post9.webp";
 import post10 from "./webp/post10.webp";
 import post11 from "./webp/post11.webp";
 
+// cart page
+import emptyCart from "./webp/emptyCart.webp";
+
 export {
     logo, shapeFooter, shapeLeaf, shape1, shape2, shape3, pizzaSlice, vintageBorder, kFood01, kFood02, kFood03, kFood04, kFood05, kFood06, kFood07, clock, tometo, reviewBg, pizzaDetail, chef1, chef2, chef3, chef4, chef5, chef6,
 
@@ -104,4 +107,6 @@ export {
     aboutVideoBg, pizzaBg, pizzaRotate, aboutLines, experience, client1, client2, client3, client4, client5, client6, client7, client8,
 
     profile, post1, post2, post3, post4, post5, post6, post7, post8, post9, post10, post11,
+
+    emptyCart,
 }

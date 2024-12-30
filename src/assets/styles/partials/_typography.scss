@@ -10,6 +10,12 @@
     font-weight: 400;
 }
 
+@mixin font16bold {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
 @mixin font18bold {
     font-size: 18px;
     line-height: 29px;
