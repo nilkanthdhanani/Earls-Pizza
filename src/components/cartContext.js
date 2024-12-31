@@ -35,7 +35,7 @@ export const CartProvider = ({ children }) => {
 
     const removeFromCart = (uniqueId) => {
         setCartItems(cartItems.filter(item => item.uniqueId !== uniqueId));
-    };    
+    };
 
     const updateCartItemQuantity = (uniqueId, size, newQuantity) => {
         setCartItems((prevItems) =>
@@ -60,4 +60,11 @@ export const CartProvider = ({ children }) => {
     );
 };
 
-export const useCart = () => useContext(CartContext);
+export const useCart = () => {
+    const context = useContext(CartContext);
+    if (!context) {
+        throw new Error("useCart must be used within a CartProvider");
+    }
+    return context;
+};
+
