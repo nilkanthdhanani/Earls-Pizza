@@ -1,13 +1,8 @@
-import CloseIcon from '@/assets/images/svg/closeIcon';
-import styles from './pizzaDetails.module.scss';
-import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import StarIcon from '@/assets/images/svg/starIcon';
 import StarIcon2 from '@/assets/images/svg/starIcon2';
-import { useCart } from '@/components/cartContext';
 
 export default function PizzaDetails({ pizza, onClose }) {
-    const { addToCart } = useCart();
     const modalRef = useRef(null);
     const [regularQty, setRegularQty] = useState(0);
     const [mediumQty, setMediumQty] = useState(0);
@@ -30,8 +25,6 @@ export default function PizzaDetails({ pizza, onClose }) {
             alert("Please select at least one pizza to add to the cart.");
             return;
         }
-
-        addToCart(pizza, { regular: regularQty, medium: mediumQty, large: largeQty });
         onClose();
     };
 

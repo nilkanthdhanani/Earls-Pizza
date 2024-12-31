@@ -10,7 +10,6 @@ import TopRef from "@/common/topRef";
 import { useEffect } from "react";
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import { CartProvider } from "@/components/cartContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -30,12 +29,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="./favicon.ico" />
       </head>
       <body className={inter.className}>
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <TopRef />
-        </CartProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <TopRef />
       </body>
     </html>
   );
