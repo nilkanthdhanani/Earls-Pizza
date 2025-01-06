@@ -144,7 +144,7 @@
             }
 
             .pizzaBoxContent {
-                h2 {
+                h3 {
                     @include font28bold;
                     font-family: var(--font-family-oswald);
                     color: var(--font-white);
@@ -156,7 +156,6 @@
                     justify-content: center;
                     gap: 5px;
                     margin: 10px 0;
-
                     svg {
                         fill: var(--font-gray);
                     }
@@ -166,7 +165,6 @@
                     @include commonPera;
                     color: var(--font-gold);
                     text-align: center;
-
                     span {
                         &:first-child {
                             text-decoration: line-through;
@@ -176,7 +174,7 @@
             }
         }
     }
-
+    
     .pageNumber {
         margin-top: 50px;
         display: flex;
